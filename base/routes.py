@@ -39,7 +39,7 @@ from bm.core.DocumentProcessor import DocumentProcessor
 from bm.core.engine.factories.ClassificationFactory import ClassificationFactory
 from bm.core.engine.factories.PredictionFactory import PredictionFactory
 from bm.datamanipulation.AdjustDataFrame import create_figure, import_mysql_table_csv, \
-    import_mysql_query_csv
+    export_mysql_query_to_csv
 from bm.datamanipulation.DataCoderProcessor import DataCoderProcessor
 from bm.db_helper.AttributesHelper import get_features, get_labels, get_model_name
 from bm.utiles.CVSReader import getcvsheader, adjust_csv_file

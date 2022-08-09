@@ -1,8 +1,10 @@
 import itertools
+import json
 
 import numpy
 import os
 
+import requests
 from matplotlib import pyplot as plt
 from pandas import DataFrame
 import pandas as pd
@@ -15,6 +17,7 @@ from joblib import dump, load
 from app.base.constants.BM_CONSTANTS import df_location
 from app.base.db_models import ModelEncodedColumns
 from app.base.db_models.ModelFeatures import ModelFeatures
+from base.constants.BM_CONSTANTS import api_data_filename, data_files_folder, api_data_folder
 from bm.db_helper.AttributesHelper import add_encoded_column_values
 from bm.db_helper.DBConnector import DBConnector
 from bm.utiles.CVSReader import get_only_file_name, get_file_path
@@ -383,7 +386,7 @@ def import_mysql_table_csv(host_name, username, password, database_name, table_n
     mycursor.close()
     return file_location
 
-def import_mysql_query_csv(host_name, username, password, database_name, query_statement):
+def export_mysql_query_to_csv(host_name, username, password, database_name, query_statement):
     db_connector = DBConnector()
     conn = db_connector.create_mysql_connection(host_name, username, password, database_name)
 
@@ -405,6 +408,31 @@ def import_mysql_query_csv(host_name, username, password, database_name, query_s
     count_row = data.shape[0]
 
     return file_location, count_row
+
+def export_api_respose_to_csv(api_url, request_type, root_node: None, request_parameters:None):
+    try:
+        api_response = requests.get(url=api_url, json=request_parameters) if request_type == 'type_get' else requests.post(url=api_url, json=request_parameters)
+
+        if (api_response.status_code != 200):
+            raise Exception("Error calling the API.")
+
+        # Create json file
+        json_response = json.loads(api_response.text)
+        df =  pd.json_normalize(json_response) if root_node == None else pd.json_normalize(json_response[root_node])
+        df = pd.DataFrame(df)
+        data_file_path = api_data_folder + "{}".format(api_data_filename)
+        df.to_csv(data_file_path, index=False)
+        data = pd.read_csv(data_file_path)
+
+        # Check if the dataset if engough
+        count_row = data.shape[0]
+
+        return data_file_path, count_row
+
+    except Exception as e:
+        print('Ohh -delete_model_files...Something went wrong.')
+        print(e)
+        return e
 
 # Delete the orginal data file and create sample data file with the same name
 def convert_data_to_sample(ds_file_location, no_of_sample=5):

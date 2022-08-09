@@ -39,7 +39,7 @@ from bm.core.DocumentProcessor import DocumentProcessor
 from bm.core.engine.factories.ClassificationFactory import ClassificationFactory
 from bm.core.engine.factories.PredictionFactory import PredictionFactory
 from bm.datamanipulation.AdjustDataFrame import create_figure, import_mysql_table_csv, \
-    import_mysql_query_csv
+    export_mysql_query_to_csv
 from bm.datamanipulation.DataCoderProcessor import DataCoderProcessor
 from bm.db_helper.AttributesHelper import get_features, get_labels, get_model_name
 from bm.utiles.CVSReader import getcvsheader, adjust_csv_file
@@ -163,6 +163,13 @@ def selectphysicalfiles():
     return selectds()
 
 
+@blueprint.route('/callapi', methods=['GET', 'POST'])
+@login_required
+def callapi():
+    session['ds_source'] = request.form.get('ds_source')
+    return selectds()
+
+
 def selectds():
     return render_template('applications/pages/connecttods.html', ds_id=session['ds_source'], segment='createmodel')
 
@@ -234,37 +241,38 @@ def dffromdb():
 
     except Exception as e:
         print(e)
-    return render_template('page-501.html', error=e.with_traceback(), segment='error')
+        return render_template('page-501.html', error=e, segment='error')
 
 
-@blueprint.route('/dffrompf', methods=['GET', 'POST'])
+@blueprint.route('/dffromapi', methods=['GET', 'POST'])
 @login_required
-def dffrompf():
+def dffromapi():
     try:
         if request.method == 'POST':
-            ds_source = session['ds_source']
-            ds_goal = session['ds_goal']
-            ftb_server = request.form.get('ftb_server')
-            ftb_username = request.form.get('ftb_username')
-            ftb_password = request.form.get('ftb_password')
-            is_local_data = request.form.get("is_local_data")
-            session['is_local_data'] = request.form.get("is_local_data")
 
-            return render_template('applications/pages/classification/creatingclassificationmodel.html',
-                                   location=ftb_server,
-                                   name=ftb_username,
-                                   session_token=ftb_password,
-                                   progress_icon_path=progress_icon_path, fname='',
-                                   is_local_data=is_local_data,
-                                   loading_icon_path=loading_icon_path,
-                                   ds_source=ds_source, ds_goal=ds_goal,
-                                   segment='createmodel')
+            database_name, file_location, headersArray, count_row, message = BaseDirector.prepare_api_results(request)
+            cc = session['ds_goal']
+
+            if (session['ds_goal'] == current_app.config['PREDICTION_MODULE']):
+                prediction_director = PredictionDirector()
+                return prediction_director.fetch_data(session['fname'], headersArray, message)
+
+            if (session['ds_goal'] == current_app.config['FORECASTING_MODULE']):
+                forecasting_director = ForecastingDirector()
+                return forecasting_director.specify_forecating_properties(file_location, headersArray, message)
+
+            if (session['ds_goal'] == current_app.config['CLASSIFICATION_MODULE']):
+                return render_template('applications/pages/classification/selectfields.html', headersArray=headersArray,
+                                       segment='createmodel', message=message)
+
+            if (session['ds_goal'] == current_app.config['ROBOTIC_MODULE']):
+                return render_template('applications/dashboard.html')
+
+            return render_template('applications/dashboard.html')
 
     except Exception as e:
-        tb = sys.exc_info()[2]
         print(e)
-        return render_template('page-501.html', error=e.with_traceback(tb))
-
+        return render_template('page-501.html', error='Error calling the API', segment='error')
 
 @blueprint.route('/creatingthemodel', methods=['GET', 'POST'])
 @login_required

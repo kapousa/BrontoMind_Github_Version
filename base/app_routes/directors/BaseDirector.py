@@ -5,7 +5,7 @@ from flask import request, render_template, session
 from werkzeug.utils import secure_filename
 
 from app.base.constants.BM_CONSTANTS import df_location
-from bm.datamanipulation.AdjustDataFrame import import_mysql_query_csv
+from bm.datamanipulation.AdjustDataFrame import export_mysql_query_to_csv
 from bm.utiles.CVSReader import getcvsheader
 from bm.utiles.Helper import Helper
 
@@ -54,7 +54,7 @@ class BaseDirector:
         password = request.form.get('password')
         database_name = request.form.get('database_name')
         sql_query = request.form.get('sql_query')
-        file_location, count_row = import_mysql_query_csv(host_name, username, password, database_name, sql_query)
+        file_location, count_row = export_mysql_query_to_csv(host_name, username, password, database_name, sql_query)
 
         if (count_row < 50):
             return render_template('applications/pages/dashboard.html',

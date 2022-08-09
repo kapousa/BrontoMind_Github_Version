@@ -53,20 +53,19 @@
         </div>
         <div class="col-md-6">
             <div class="card">
-                <div class="card-header card-header-warning">
-                    <img src="https://img.icons8.com/material/48/ffffff/mysql-logo.png"
-                         style="float:right !important;"/>
-                    <h3>MySQL Database</h3>
+                <div class="card-header card-header-success">
+                    <img src="https://img.icons8.com/material/48/ffffff/csv.png" style="float:right !important;"/>
+                    <h3>APIs</h3>
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-12">
-                            <h4>Connect BrontoMind to your MySql DB.</h4>
+                            <h4>Get the data via calling API.</h4>
                         </div>
                     </div>
-                    <form action="/selectmysqlds" name="selectmysqlds" id="selectmysqlds" method="post">
-                        <input type="hidden" id="ds_source" name="ds_source" value="2"/>
-                        <button type="submit" class="btn btn-warning pull-right">Link to Database</button>
+                    <form action="/callapi" name="callapi" id="callapi" method="post">
+                        <input type="hidden" id="ds_source" name="ds_source" value="13"/>
+                        <button type="submit" class="btn btn-light pull-right">Call the API</button>
                     </form>
                     <div class="clearfix"></div>
                 </div>
@@ -94,7 +93,27 @@
                 </div>
             </div>
         </div>
-
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header card-header-warning">
+                    <img src="https://img.icons8.com/material/48/ffffff/mysql-logo.png"
+                         style="float:right !important;"/>
+                    <h3>MySQL Database</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4>Connect BrontoMind to your MySql DB.</h4>
+                        </div>
+                    </div>
+                    <form action="/selectmysqlds" name="selectmysqlds" id="selectmysqlds" method="post">
+                        <input type="hidden" id="ds_source" name="ds_source" value="2"/>
+                        <button type="submit" class="btn btn-warning pull-right">Link to Database</button>
+                    </form>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="row">
         <div class="col-md-6">

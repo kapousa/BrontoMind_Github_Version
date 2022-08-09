@@ -35,6 +35,10 @@ output_docs = 'app/base/output_docs/'
 
 data_files_folder = 'data/'
 
+api_data_folder = 'app/data/'
+
+api_data_filename = 'api_data.csv'
+
 pkls_files_folder = 'app/pkls'
 
 physical_allowed_extensions = ['txt']
