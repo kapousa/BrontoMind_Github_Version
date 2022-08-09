@@ -4,7 +4,7 @@ lables = ['A', 'BB', 'C', 'D']                                       #DB
 enc_labels = ['A', 'BB0.5', 'BB12', 'BB115', 'BB0', 'C', 'D12', 'D1150']   #DB
 out_put = []
 enc_label = []
-# out_put[8, 12, 0.5, 12]dfd
+# out_put[8, 12, 0.5, 12]hhh
 for i in range(len(lables)):
     get_indexes = lambda enc_labels, xs: [i for (y, i) in zip(xs, range(len(xs))) if enc_labels in y]
     occurances_indexes = get_indexes(lables[i],enc_labels)

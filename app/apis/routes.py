@@ -12,7 +12,7 @@ from bm.apis.v1.APIsclassificationServices import APIsclassificationServices
 
 
 
-## APIs
+## APIss
 
 @blueprint.route('/api/v1/predictevalues', methods=['POST'])
 def predictevalues_api():

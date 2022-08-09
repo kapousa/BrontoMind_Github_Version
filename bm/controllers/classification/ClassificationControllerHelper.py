@@ -315,8 +315,7 @@ class ClassificationControllerHelper:
         y_train = []
         y_test = []
 
-        # pivot = int(0.8 * len(docs))
-        pivot = int(1 * len(docs))
+        pivot = int(0.8 * len(docs))
 
         for i in range(0, pivot):
             X_train.append(docs[i][1])
@@ -376,7 +375,7 @@ class ClassificationControllerHelper:
 
         except  Exception as e:
             print(e)
-            return e
+            return 0
 
     def evaluate_classifier(self, classifier, vectorizer, X_test, y_test, categories):
         X_test_tfidf = vectorizer.transform(X_test)

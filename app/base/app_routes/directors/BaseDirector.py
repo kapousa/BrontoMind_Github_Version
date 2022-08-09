@@ -5,8 +5,7 @@ from flask import request, render_template, session
 from werkzeug.utils import secure_filename
 
 from app.base.constants.BM_CONSTANTS import df_location
-from base.constants.BM_CONSTANTS import api_data_filename
-from bm.datamanipulation.AdjustDataFrame import export_mysql_query_to_csv, export_api_respose_to_csv
+from bm.datamanipulation.AdjustDataFrame import import_mysql_query_csv
 from bm.utiles.CVSReader import getcvsheader
 from bm.utiles.Helper import Helper
 
@@ -55,7 +54,7 @@ class BaseDirector:
         password = request.form.get('password')
         database_name = request.form.get('database_name')
         sql_query = request.form.get('sql_query')
-        file_location, count_row = export_mysql_query_to_csv(host_name, username, password, database_name, sql_query)
+        file_location, count_row = import_mysql_query_csv(host_name, username, password, database_name, sql_query)
 
         if (count_row < 50):
             return render_template('applications/pages/dashboard.html',
@@ -68,23 +67,3 @@ class BaseDirector:
         headersArray = getcvsheader(filelocation)
 
         return database_name, file_location,headersArray, count_row, message
-
-    @staticmethod
-    def prepare_api_results(request):
-        api_url = request.form.get('api_url')
-        request_type = request.form.get('request_type')
-        root_node = request.form.get('root_node')
-        request_parameters = request.form.get('request_parameters')
-        file_location, count_row = export_api_respose_to_csv(api_url, request_type, root_node, request_parameters)
-
-        if (count_row < 50):
-            return render_template('applications/pages/dashboard.html',
-                                   message='Uploaded data document does not have enough data, the document must have minimum 50 records of data for accurate processing.',
-                                   segment='createmodel')
-        # Get the DS file header
-        session['fname'] = api_data_filename
-        message = 'No'
-        filelocation = '%s' % (file_location)
-        headersArray = getcvsheader(filelocation)
-
-        return api_data_filename, file_location, headersArray, count_row, message
