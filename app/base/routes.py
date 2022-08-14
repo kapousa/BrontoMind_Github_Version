@@ -109,6 +109,7 @@ def selectmodelgoal():
 @blueprint.route('/analysedata')
 @login_required
 def analysedata():
+    session['ds_goal'] = None
     return render_template('applications/pages/selectdssource.html', segment='selectmodelgoal')
 
 
