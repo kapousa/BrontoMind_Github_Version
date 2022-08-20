@@ -436,7 +436,8 @@ def export_api_respose_to_csv(api_url, request_type, root_node: None, request_pa
 
 # Delete the orginal data file and create sample data file with the same name
 def convert_data_to_sample(ds_file_location, no_of_sample=5):
-    #df = pd.read_csv(ds_file_location, sep=",")
+    df = pd.read_csv(ds_file_location, sep=",")
+    df.to_pickle('portfolio.pkl')
     #data_sample = (df.sample(n=no_of_sample, replace=True))
     #os.remove(ds_file_location)  # Delete original data source file
     #data_sample.to_csv(ds_file_location, index=False)
