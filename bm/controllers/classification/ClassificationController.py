@@ -1,47 +1,39 @@
-import random
-import shutil
-
-from datetime import datetime
-import matplotlib.pyplot as plt
-import plotly
-import plotly.express as px
-import plotly.graph_objs as go
-import json
-import nltk
-import numpy
-import seaborn as sns
-from flask import render_template, request, current_app, session
-
-from sklearn.metrics import confusion_matrix, classification_report
-from sqlalchemy.sql.functions import now
-
-from bm.controllers.classification.ClassificationControllerHelper import ClassificationControllerHelper
-from bm.utiles.Helper import Helper
-
-from app.base.constants.BM_CONSTANTS import plot_zip_locations, pkls_location, output_docs_location, df_location, \
-    plot_locations, scalars_location, image_short_path, html_plots_location, html_short_path, data_files_folder, \
-    classification_root_path
-from bm.controllers.BaseController import BaseController
-from bm.core.ClassificationModelProcessor import ClassificationModelProcessor
-from bm.datamanipulation.AdjustDataFrame import convert_data_to_sample
-from bm.datamanipulation.DataCoderProcessor import DataCoderProcessor
-from bm.db_helper.AttributesHelper import get_labels, get_encoded_columns, add_api_details, \
-    update_api_details_id
 import os
 import pickle
+import random
+import shutil
+from datetime import datetime
 from random import randint
 
+import matplotlib.pyplot as plt
+import numpy
 import numpy as np
 import pandas as pd
+import seaborn as sns
+from flask import session
 from sklearn import metrics
+from sklearn.metrics import confusion_matrix, classification_report
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
+
 from app import db
+from app.base.constants.BM_CONSTANTS import plot_zip_locations, pkls_location, df_location, \
+    plot_locations, scalars_location, image_short_path, data_files_folder, \
+    classification_root_path
 from app.base.db_models.ModelProfile import ModelProfile
+from bm.controllers.BaseController import BaseController
+from bm.controllers.ControllersHelper import ControllersHelper
+from bm.controllers.classification.ClassificationControllerHelper import ClassificationControllerHelper
+from bm.core.ModelProcessor import ModelProcessor
+from bm.datamanipulation.AdjustDataFrame import convert_data_to_sample
 from bm.datamanipulation.AdjustDataFrame import remove_null_values
-from bm.db_helper.AttributesHelper import add_features, add_labels, delete_encoded_columns, get_model_id, get_features
+from bm.datamanipulation.DataCoderProcessor import DataCoderProcessor
+from bm.db_helper.AttributesHelper import add_api_details, \
+    update_api_details_id
+from bm.db_helper.AttributesHelper import add_features, add_labels, delete_encoded_columns
 from bm.utiles.CVSReader import get_only_file_name
 from bm.utiles.CVSReader import getcvsheader, get_new_headers_list, reorder_csv_file
+from bm.utiles.Helper import Helper
 
 plt.style.use('fivethirtyeight')
 plt.rcParams['lines.linewidth'] = 1.5
@@ -67,7 +59,11 @@ class ClassificationController:
             return [
                 'Not able to predict. One or more entered values has not relevant value in your dataset, please enter data from provided dataset']
 
-    def run_the_classification_model(self, root_path, csv_file_location, categories_column, classification_features, ds_source, ds_goal):
+    def run_the_classification_model(self, root_path, csv_file_location, categories_column, classification_features,
+                                     ds_source, ds_goal):
+        """
+            Currently this function is not used at any place
+        """
         # ------------------Preparing data frame-------------------------#
         cvs_header = getcvsheader(csv_file_location)
         new_headers_list = get_new_headers_list(cvs_header, categories_column)
@@ -122,7 +118,7 @@ class ClassificationController:
         pickle.dump(s_c, open(scalar_file_name, 'wb'))
 
         # Select proper model
-        mp = ClassificationModelProcessor()
+        mp = ModelProcessor()
         cls = mp.classificationmodelselector(len(encoded_data))
         # cls = # LinearRegression() #MultiOutputClassifier(KNeighborsClassifier(n_neighbors=5, metric='minkowski', p=2), n_jobs=-1)  # KNeighborsRegressor)
         cls.fit(training_x, training_y)
@@ -237,7 +233,8 @@ class ClassificationController:
         convert_data_to_sample(csv_file_location, 5)
         return all_return_values
 
-    def run_classification_model(self, location_details, ds_goal, ds_source, is_local_data, featuresdvalues=['data'], classification_label=['category']):
+    def run_classification_model(self, location_details, ds_goal, ds_source, is_local_data, featuresdvalues=['data'],
+                                 classification_label=['category']):
         try:
             model_id = randint(0, 10)
             helper = Helper()
@@ -247,13 +244,13 @@ class ClassificationController:
 
             # Create datafile (data.txt)
             if (is_local_data == 'Yes'):
-                folders_list = classificationcontrollerHelper.get_folder_structure(files_path, req_extensions=('.txt'))
+                folders_list = ControllersHelper.get_folder_structure(files_path, req_extensions=('.txt'))
                 featuresdvalues = ['data']
                 classification_label = ['category']
-                data_set = classificationcontrollerHelper.create_data_set(files_path, folders_list)
+                data_set = classificationcontrollerHelper.create_classification_data_set(files_path, folders_list)
             elif (is_local_data == 'csv'):
                 csv_file_path = '%s%s' % (df_location, session['fname'])
-                data_set = classificationcontrollerHelper.create_csv_data_set(csv_file_path)
+                data_set = classificationcontrollerHelper.create_classification_csv_data_set(csv_file_path)
             else:
                 folders_list = helper.list_ftp_dirs(
                     location_details)  # classificationcontrollerHelper.get_folder_structure(files_path, req_extensions=('.txt'))
@@ -262,7 +259,7 @@ class ClassificationController:
             full_file_path = '%s%s%s' % (classification_root_path, data_files_folder, 'data.txt')
             docs = classificationcontrollerHelper.setup_docs(full_file_path)
             categories, most_common = classificationcontrollerHelper.print_frequency_dist(docs)
-            #X_train, X_test, y_train, y_test = classificationcontrollerHelper.get_splits(docs)
+            # X_train, X_test, y_train, y_test = classificationcontrollerHelper.get_splits(docs)
             t_model = classificationcontrollerHelper.train_classifier(docs, categories)
 
             # Save model metadata
@@ -328,7 +325,7 @@ class ClassificationController:
         return 0
 
     def classify_text(self, test_text):
-            classification_controller_helper = ClassificationControllerHelper()
-            return classification_controller_helper.classify(test_text)
+        classification_controller_helper = ClassificationControllerHelper()
+        return classification_controller_helper.classify(test_text)
 
 # b = run_demo_model1(root_path, 'diabetes.csv', ['Age'], '1', '2')

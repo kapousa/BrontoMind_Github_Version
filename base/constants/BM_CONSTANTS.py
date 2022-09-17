@@ -27,6 +27,8 @@ root_path = '../app/'
 
 classification_root_path = 'app/'
 
+clustering_root_path = 'app/'
+
 output_docs_location = 'app/base/output_docs/'
 
 docs_templates_folder = 'docs_templates/'

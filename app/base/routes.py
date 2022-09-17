@@ -37,6 +37,7 @@ from bm.controllers.prediction.ModelController import run_prediction_model, pred
 from bm.controllers.timeforecasting.TimeForecastingController import TimeForecastingController
 from bm.core.DocumentProcessor import DocumentProcessor
 from bm.core.engine.factories.ClassificationFactory import ClassificationFactory
+from bm.core.engine.factories.ClusteringFactory import ClusteringFactory
 from bm.core.engine.factories.PredictionFactory import PredictionFactory
 from bm.datamanipulation.AdjustDataFrame import create_figure, import_mysql_table_csv, \
     export_mysql_query_to_csv
@@ -194,6 +195,11 @@ def uploadcsvds():
             forecasting_director = ForecastingDirector()
             return forecasting_director.specify_forecating_properties(filePath, headersArray, message)
 
+        if (session['ds_goal'] == current_app.config['CLUSTERING_MODULE']):
+            session['fname'] = fname
+            return render_template('applications/pages/clustering/selectfields.html', headersArray=headersArray,
+                                   segment='createmodel', message=message)
+
         if (session['ds_goal'] == current_app.config['ROBOTIC_MODULE']):  # Robotics
             return render_template('applications/pages/robotics/selectfields.html', headersArray=headersArray,
                                    fname=fname,
@@ -235,6 +241,10 @@ def dffromdb():
                 return render_template('applications/pages/classification/selectfields.html', headersArray=headersArray,
                                        segment='createmodel', message=message)
 
+            if (session['ds_goal'] == current_app.config['CLUSTERING_MODULE']):
+                return render_template('applications/pages/clustering/selectfields.html', headersArray=headersArray,
+                                       segment='createmodel', message=message)
+
             if (session['ds_goal'] == current_app.config['ROBOTIC_MODULE']):
                 return render_template('applications/dashboard.html')
 
@@ -266,6 +276,10 @@ def dffromapi():
                 return render_template('applications/pages/classification/selectfields.html', headersArray=headersArray,
                                        segment='createmodel', message=message)
 
+            if (session['ds_goal'] == current_app.config['CLUSTERING_MODULE']):
+                return render_template('applications/pages/clustering/selectfields.html', headersArray=headersArray,
+                                       segment='createmodel', message=message)
+
             if (session['ds_goal'] == current_app.config['ROBOTIC_MODULE']):
                 return render_template('applications/dashboard.html')
 
@@ -274,6 +288,7 @@ def dffromapi():
     except Exception as e:
         print(e)
         return render_template('page-501.html', error='Error calling the API', segment='error')
+
 
 @blueprint.route('/creatingthemodel', methods=['GET', 'POST'])
 @login_required
@@ -336,6 +351,16 @@ def creatingthemodel():  # The function of showing the gif page
                                        ds_source=ds_source, ds_goal=ds_goal,
                                        segment='createmodel')
 
+            if (ds_goal == current_app.config['CLUSTERING_MODULE']):
+                clustering_features = numpy.array(request.form.getlist('clustering_features'))
+                session['is_local_data'] = request.form.get("is_local_data")
+                return render_template('applications/pages/clustering/creatingclusteringmodel.html',
+                                       clustering_features=clustering_features,
+                                       progress_icon_path=progress_icon_path, fname=fname,
+                                       loading_icon_path=loading_icon_path,
+                                       ds_source=ds_source, ds_goal=ds_goal,
+                                       segment='createmodel')
+
             return 0
         else:
             return 0
@@ -370,6 +395,10 @@ def sendvalues():  # The main function of creating the model
                                         classification_label)  # Reorder the columns of the data file
                 classificationfactory = ClassificationFactory()
                 return classificationfactory.create_classification_text_model(request)
+
+            if (ds_goal == current_app.config['CLUSTERING_MODULE']):
+                clusteringfactory = ClusteringFactory()
+                return clusteringfactory.create_clustering_text_model(request)
 
             if (ds_goal == current_app.config['FORECASTING_MODULE']):
                 data_file_path = "%s%s" % (df_location, fname)

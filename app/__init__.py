@@ -3,6 +3,7 @@
 Copyright (c) 2019 - present AppSeed.us
 """
 import logging
+from configparser import ConfigParser
 
 from flask import Flask
 from flask_login import LoginManager
@@ -11,6 +12,9 @@ from importlib import import_module
 
 db = SQLAlchemy(session_options={"expire_on_commit": False})
 login_manager = LoginManager()
+
+config_parser = ConfigParser()
+config_parser.read('app_properties.properties')
 
 
 def register_extensions(app):
@@ -41,4 +45,5 @@ def create_app(config):
     register_extensions(app)
     register_blueprints(app)
     configure_database(app)
+    # print(config_parser.get('ErrorMessages', 'ErrorMessages.fail_create_model'))
     return app

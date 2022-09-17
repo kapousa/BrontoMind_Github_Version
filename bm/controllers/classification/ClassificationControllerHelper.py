@@ -4,34 +4,32 @@ import os
 import pickle
 import string
 from collections import defaultdict
+from csv import DictReader
 from os import listdir
 from os.path import isfile, join
 from random import shuffle
 
+import matplotlib.pyplot as plt
 import numpy
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-import plotly.graph_objects as go
-import plotly.express as px
-from nltk import word_tokenize, FreqDist, metrics
-from sklearn.metrics import precision_score, recall_score, f1_score, confusion_matrix, classification_report
-from csv import DictReader
-from nltk.corpus import stopwords
-from seaborn import heatmap
 import plotly
+import plotly.express as px
+import seaborn as sns
+from nltk import word_tokenize, FreqDist
+from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.metrics import precision_score, recall_score, f1_score, confusion_matrix, classification_report
 from sklearn.naive_bayes import MultinomialNB
-import ftplib
 
-from app.base.constants.BM_CONSTANTS import html_plots_location, html_short_path, classification_root_path, pkls_location, \
+from app.base.constants.BM_CONSTANTS import html_plots_location, html_short_path, classification_root_path, \
+    pkls_location, \
     data_files_folder, df_location
 from bm.utiles.Helper import Helper
 
 
 class ClassificationControllerHelper:
-    #stop_words = set(stopwords.words('english'))
+    # stop_words = set(stopwords.words('english'))
 
     def __init__(self):
         ''' Constructor for this class. '''
@@ -59,7 +57,7 @@ class ClassificationControllerHelper:
         return html_path
 
     @staticmethod
-    def plot_confusion_matrix(model_name, confusionmatrix, categories= [], title='Classification report'):
+    def plot_confusion_matrix(model_name, confusionmatrix, categories=[], title='Classification report'):
         categories = numpy.array(categories).flatten()
         print(confusionmatrix)
         df = pd.DataFrame(confusionmatrix)
@@ -160,7 +158,7 @@ class ClassificationControllerHelper:
         try:
             tokens = defaultdict(list)
             most_common = []
-            categories =[]
+            categories = []
             for doc in docs:
                 doc_label = doc[0]
                 doc_text = doc[1]
@@ -183,7 +181,7 @@ class ClassificationControllerHelper:
         try:
             tokens = defaultdict(list)
             most_common = []
-            categories =[]
+            categories = []
             for doc in docs:
                 doc_label = doc[0:-1]
                 doc_text = doc[-1]
@@ -202,7 +200,7 @@ class ClassificationControllerHelper:
             print(e)
             return 0
 
-    def create_data_set(self, files_path, labels):
+    def create_classification_data_set(self, files_path, labels):
         try:
             output_file = '%s%s' % (files_path, 'data.txt')
             if os.path.exists(output_file):
@@ -222,7 +220,7 @@ class ClassificationControllerHelper:
             print(e)
             return 0
 
-    def create_csv_data_set(self, csv_file_path):
+    def create_classification_csv_data_set(self, csv_file_path):
         try:
             output_file = '%s%s' % (df_location, 'data.txt')
             if os.path.exists(output_file):
@@ -235,11 +233,11 @@ class ClassificationControllerHelper:
                     csv_dict_reader = DictReader(read_obj)
                     for row in csv_dict_reader:
                         aa = row
-                        #print(row)
+                        # print(row)
                         data_row = []
                         for key, value in row.items():
                             data_row.append(value)
-                        if(data_row[0] != '' and data_row[1] != ''):
+                        if (data_row[0] != '' and data_row[1] != ''):
                             outfile.write('%s\t' % (data_row[1]))
                             text = data_row[0].replace('\n', '')
                             outfile.write('%s\n' % (text))
@@ -307,7 +305,7 @@ class ClassificationControllerHelper:
         text = text.lower()
         return text
 
-    def get_splits(self, docs):
+    def get_classification_splits(self, docs):
         shuffle(docs)
 
         X_train = []
@@ -330,7 +328,7 @@ class ClassificationControllerHelper:
 
     def train_classifier(self, docs, categories):
         try:
-            X_train, X_test, y_train, y_test = self.get_splits(docs)
+            X_train, X_test, y_train, y_test = self.get_classification_splits(docs)
 
             vectorized = CountVectorizer(stop_words='english', ngram_range=(1, 3), min_df=3, analyzer='word')
 
@@ -361,9 +359,9 @@ class ClassificationControllerHelper:
             all_return_value = {'train_precision': str(precision),
                                 'train_recall': str(recall),
                                 'train_f1': str(f1),
-                               'test_precision': str(precision),
-                               'test_recall': str(recall),
-                               'test_f1': str(f1)}
+                                'test_precision': str(precision),
+                                'test_recall': str(recall),
+                                'test_f1': str(f1)}
 
             # all_return_value = {'train_precision': '',
             #                     'train_recall': '',
@@ -382,15 +380,15 @@ class ClassificationControllerHelper:
         X_test_tfidf = vectorizer.transform(X_test)
         y_pred = classifier.predict(X_test_tfidf)
         precision = precision_score(y_test, y_pred,
-                                            pos_label='positive',
-                                            average=None)
+                                    pos_label='positive',
+                                    average=None)
         recall = recall_score(y_test, y_pred,
-                                      pos_label='positive',
-                                      average=None)
-        f1 = f1_score(y_test, y_pred,
                               pos_label='positive',
                               average=None)
-        cm = confusion_matrix(y_test,y_pred)
+        f1 = f1_score(y_test, y_pred,
+                      pos_label='positive',
+                      average=None)
+        cm = confusion_matrix(y_test, y_pred)
 
         classificationreport = classification_report(y_test, y_pred,
                                                      # labels=labels,

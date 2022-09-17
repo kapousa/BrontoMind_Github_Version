@@ -27,7 +27,7 @@ class Config(object):
     ROBOTIC_MODULE = '9'
     CLASSIFICATION_MODULE = '10'
     FILES_CLASSIFICATION_MODULE = '11'
-    CLUSTERING_MODULE = '12'
+    CLUSTERING_MODULE = '13'
 
 class ProductionConfig(Config):
     DEBUG = True
