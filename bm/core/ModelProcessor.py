@@ -135,10 +135,10 @@ class ModelProcessor:
                                         n_jobs=-1)
         return cls
 
-    def clustering_model_selector(self, numberofrecords =0 ):
+    def clustering_model_selector(self):
         try:
             cls = KMeans(
-                n_clusters=10)
+                n_clusters=5)
             return cls
         except Exception as e:
             return config_parser.get('ErrorMessages', 'ErrorMessages.fail_create_model')

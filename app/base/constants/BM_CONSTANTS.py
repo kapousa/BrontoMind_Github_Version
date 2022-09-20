@@ -17,6 +17,10 @@ image_short_path = 'static/images/plots/'
 
 df_location = 'app/data/'
 
+clusters_keywords_file = 'app/data/clusters_keywords.pkl'
+
+number_of_clustering_keywords = 25
+
 html_plots_location = 'app/templates/applications/plots/'
 
 html_short_path = 'applications/plots/'

@@ -21,6 +21,7 @@ from app import login_manager
 from app.base import blueprint
 from app.base.app_routes.directors.BaseDirector import BaseDirector
 from app.base.app_routes.directors.ClassificationDirector import ClassificationDirector
+from app.base.app_routes.directors.ClusteringDirector import ClusteringDirector
 from app.base.app_routes.directors.ForecastingDirector import ForecastingDirector
 from app.base.app_routes.directors.PredictionDirector import PredictionDirector
 from app.base.constants.BM_CONSTANTS import plot_zip_download_location, progress_icon_path, \
@@ -539,6 +540,10 @@ def showdashboard():
             classification_director = ClassificationDirector()
             return classification_director.show_text_model_dashboard()
 
+        if profile['ds_goal'] == current_app.config['CLUSTERING_MODULE']:
+            clustering_director = ClusteringDirector()
+            return clustering_director.show_clustermodel_dashboard(request, profile)
+
         fname = profile['model_name'] + '.csv'
         data_file_path = os.path.join(app.config['UPLOAD_FOLDER'], fname)
         df = pd.read_csv(data_file_path, sep=",")
@@ -598,6 +603,7 @@ def showdashboard():
                                    segment='showdashboard', created_on=profile['created_on'],
                                    ds_goal=profile['ds_goal'],
                                    updated_on=profile['updated_on'], last_run_time=profile['last_run_time'])
+
         else:
             return 0
     else:

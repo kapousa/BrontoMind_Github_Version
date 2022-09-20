@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 import os
 import pickle
 import random
@@ -10,6 +10,7 @@ import pandas as pd
 # from app import config_parser
 from flask import session
 from sklearn.decomposition import PCA
+from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import StandardScaler
 
 from app import db
@@ -68,17 +69,22 @@ class ClusteringController:
             full_file_path = '%s%s' % (df_location, 'data.pkl')
 
             X_train = pd.read_pickle(full_file_path)
-            dcp = DataCoderProcessor()
-            real_x = dcp.vectrise_feature_text(model_id, X_train)
-            pca = PCA(2)
+            # dcp = DataCoderProcessor()
+            # real_x = dcp.vectrise_feature_text(model_id, X_train)
+            #pca = PCA(2)
             # Transform the data
-            real_x = pca.fit_transform(real_x)
+            #real_x = pca.fit_transform(real_x)
+            documents = X_train[featuresdvalues].values.astype("U")
+            documents = documents.flatten()
+
+            vectorizer = TfidfVectorizer(stop_words='english')
+            features = vectorizer.fit_transform(documents)
 
             # Select proper model
             mp = ModelProcessor()
-            cls = mp.clustering_model_selector(len(real_x))
-            model = cls.fit(real_x)
-            label = cls.fit_predict(real_x)
+            cls = mp.clustering_model_selector()
+            model = cls.fit(features)
+            X_train['cluster'] = model.labels_
 
             model_file_name = pkls_location + file_name + '_model.pkl'
             pickle.dump(cls, open(model_file_name, 'wb'))
@@ -90,17 +96,15 @@ class ClusteringController:
             for f in os.listdir(plot_zip_locations):
                 os.remove(os.path.join(plot_zip_locations, f))
 
-            # Show prediction
-            html_path = ClusteringControllerHelper.plot_clustering_report(real_x, model, label)
+            # Show Elbow graph and get clusters' keywords
+            html_path = ClusteringControllerHelper.plot_elbow_graph(features.data)
+            #html_path = ClusteringControllerHelper.plot_clustering_report(features.data, model, model.labels_, file_name)
+            clusters_keywords = ClusteringControllerHelper.extract_clusters_keywords(model, 5, vectorizer)
 
             # ------------------Predict values from the model-------------------------#
             now = datetime.now()
-            all_return_values = {'accuracy': 'c_m', 'confusion_matrix': 'c_m', 'plot_image_path': 'html_path',
-                                 # image_path,
-                                 'file_name': file_name,
-                                 'Mean_Absolute_Error': 'Mean_Absolute_Error',
-                                 'Mean_Squared_Error': 'Mean_Squared_Error',
-                                 'Root_Mean_Squared_Error': 'Root_Mean_Squared_Error',
+            all_return_values = {'file_name': file_name,
+                                 'clusters_keywords': clusters_keywords,
                                  'created_on': now.strftime("%d/%m/%Y %H:%M:%S"),
                                  'updated_on': now.strftime("%d/%m/%Y %H:%M:%S"),
                                  'last_run_time': now.strftime("%d/%m/%Y %H:%M:%S")}
@@ -114,7 +118,7 @@ class ClusteringController:
                           'mean_absolute_error': 'str(Mean_Absolute_Error)',
                           'mean_squared_error': 'str(Mean_Squared_Error)',
                           'root_mean_squared_error': 'str(Root_Mean_Squared_Error)',
-                          'plot_image_path': 'html_path',
+                          'plot_image_path': html_path,
                           'created_on': now.strftime("%d/%m/%Y %H:%M:%S"),
                           'updated_on': now.strftime("%d/%m/%Y %H:%M:%S"),
                           'last_run_time': now.strftime("%d/%m/%Y %H:%M:%S"),
@@ -130,7 +134,7 @@ class ClusteringController:
 
             # Add features, labels, and APIs details
             add_features_list = add_features(model_id, [file_name])
-            add_labels_list = add_labels(model_id, ['clustering'])
+            add_labels_list = add_labels(model_id, ['cluster'])
             api_details_id = random.randint(0, 22)
             api_details_list = add_api_details(model_id, api_details_id, 'v1')
             api_details_list = update_api_details_id(api_details_id)
@@ -140,11 +144,9 @@ class ClusteringController:
 
             # APIs details and create APIs document
 
-            convert_data_to_sample(model_file_name, 5)
-
             return all_return_values
         except Exception as e:
-            return 0
+            return {}
             # return config_parser.get('ErrorMessages', 'ErrorMessages.fail_create_model')
 
 

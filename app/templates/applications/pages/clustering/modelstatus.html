@@ -16,7 +16,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header card-header-primary">
-                    <h4 class="card-title ">Model Status</h4>
+                    <h2 class="card-title ">Model Status</h2>
                     <p class="card-category"></p>
                 </div>
                 <div class="card-body">
@@ -76,117 +76,88 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="card card-stats">
-                <div class="card-header card-header-primary card-header-icon">
-                    <div class="icon icon-shape bg-primary text-white rounded-circle shadow">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <p class="card-category">Train precision</p>
-                    <h3 class="card-title">{{ train_precision }} %</h3>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="card card-stats">
-                <div class="card-header card-header-success card-header-icon">
-                    <div class="icon icon-shape bg-success text-white rounded-circle shadow">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <p class="card-category">Train recall</p>
-                    <h3 class="card-title">{{ train_recall }}</h3>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="card card-stats">
-                <div class="card-header card-header-danger card-header-icon">
-                    <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <p class="card-category">Train f1</p>
-                    <h3 class="card-title">{{ train_f1 }}</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="card card-stats">
-                <div class="card-header card-header-primary card-header-icon">
-                    <div class="icon icon-shape bg-primary text-white rounded-circle shadow">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <p class="card-category">Test precision</p>
-                    <h3 class="card-title">{{ test_precision }} %</h3>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="card card-stats">
-                <div class="card-header card-header-success card-header-icon">
-                    <div class="icon icon-shape bg-success text-white rounded-circle shadow">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <p class="card-category">Test recall</p>
-                    <h3 class="card-title">{{ test_recall }}</h3>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="card card-stats">
-                <div class="card-header card-header-danger card-header-icon">
-                    <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <p class="card-category">Test f1</p>
-                    <h3 class="card-title">{{ test_f1 }}</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8">
-            <div class="card card-chart">
-                <div class="card-header card-header-warning">
-                    <h2 class="card-title">Most Common Text (By Category)</h2>
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header card-header-primary">
+                    <h2 class="card-title ">Top 15 Clusters' Keywords</h2>
                     <p class="card-category"></p>
                 </div>
                 <div class="card-body">
-                    {{ most_common }}
-                    <a class="nav-link" href="/downloadplots">
-                        <button type="button" class="btn btn-primary pull-right">Download All Correlations</button>
-                    </a>
-                    <div class="ripple-container"></div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card card-chart">
-                <div class="card-header card-header-warning">
-                    <div>
-                        <h4 class="card-title ">Export the model</h4>
+                    <div class="table-responsive">
+                        <table class="table"/>
+                        <table class="table align-items-center">
+                            <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Cluster Name</th>
+                                <th scope="col">Keywords</th>
+                            </tr>
+                            </thead>
+                            <tbody class="list">
+                            {% for cluster_keywords in clusters_keywords %}
+                                <tr>
+                                    <td class="budget"><b>{{ cluster_keywords }}</b></td>
+                                    <td  style="white-space: normal !important;">{{ clusters_keywords[cluster_keywords] }}</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
                     </div>
-                </div>
-                <div class="card-body">
-                    <h4 class="card-title">Webpage</h4>
-                    <p class="card-category">Create web page tp predict values and also you can embed this page into
-                        your system.</p>
-                    <a class="nav-link" data-toggle="modal" data-target="#webpageModal" href="#webpageModal">
-                        <button type="button" class="btn btn-success pull-right">Create Webpage</button>
-                    </a>
-                    <div class="ripple-container"></div>
-                </div>
-                <div class="card-body">
-                    <h4 class="card-title">APIs</h4>
-                    <p class="card-category">APIs library to integrate your model with other system.</p>
-                    <form name="downloadapisdocument" method="get" action="/downloadapisdocument">
-                        <button type="submit" class="btn btn-danger pull-right">Download APIs Document</button>
-                    </form>
                 </div>
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header card-header-primary">
+                    <h2 class="card-title ">Custering Analysis</h2>
+                    <p class="card-category"></p>
+                </div>
+                <div class="card-body">
+                    {% include plot_image_path %}{##}
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+    <div class="col-md-6">
+        <div class="card card-chart">
+            <div class="card-header card-header-warning">
+                <div>
+                    <h4 class="card-title ">Export the model</h4>
+                </div>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Webpage</h4>
+                <p class="card-category">Create web page tp predict values and also you can embed this page into
+                    your system.</p>
+                <a class="nav-link" data-toggle="modal" data-target="#webpageModal" href="#webpageModal">
+                    <button type="button" class="btn btn-success pull-right">Create Webpage</button>
+                </a>
+                <div class="ripple-container"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card card-chart">
+            <div class="card-header card-header-warning">
+                <div>
+                    <h4 class="card-title ">Integrate woth other systems</h4>
+                </div>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">APIs</h4>
+                <p class="card-category">APIs library to integrate your model with other system without any new line of
+                    code or hardware needed.</p>
+                <form name="downloadapisdocument" method="get" action="/downloadapisdocument">
+                    <button type="submit" class="btn btn-danger pull-right">Download APIs Document</button>
+                </form>
+                <div class="ripple-container"></div>
+            </div>
+        </div>
+    </div>
+
 
 
 {% endblock content %}

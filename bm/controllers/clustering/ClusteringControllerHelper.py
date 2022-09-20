@@ -10,10 +10,13 @@ import plotly as pl
 import plotly.graph_objs as pgo
 from nltk.corpus import stopwords
 from plotly.subplots import make_subplots
+from sklearn.cluster import KMeans
 from sklearn.feature_extraction.text import CountVectorizer
-import plotly.express as px
+from sklearn.preprocessing import MinMaxScaler
+
+from app import config_parser
 from app.base.constants.BM_CONSTANTS import html_plots_location, html_short_path, pkls_location, \
-    clustering_root_path, df_location
+    clustering_root_path, df_location, clusters_keywords_file
 from bm.controllers.ControllersHelper import ControllersHelper
 from bm.core.engine.processors.ClusteringModelProcessor import ClusteringModelProcessor
 from bm.utiles.Helper import Helper
@@ -27,7 +30,7 @@ class ClusteringControllerHelper:
         # Create some member animals
         self.stop_words = set(stopwords.words('english'))
 
-    def plot_clustering_report_(df, model, label, model_name='file_name'):
+    def plot_clustering_report_(self, df, model, label, model_name='file_name'):
         # Represent neighborhoods as in previous bubble chart, adding cluster information under color.
         df = pd.DataFrame(df)
         df['label'] = label
@@ -59,28 +62,30 @@ class ClusteringControllerHelper:
         for i in u_label:
             label_data = df.loc[df['label'] == i]
             trace0 = pl.graph_objs.Scatter(x=label_data[0],
-                                 y=label_data[1],
-                                 text="Cluster:" + str(i),
-                                 marker=pgo.scatter.Marker(symbol='x',
-                                                   size=12,
-                                                   color=u_label, opacity=0.5),
-                                 showlegend=False
-                                 )
+                                           y=label_data[1],
+                                           mode="markers",
+                                           name="Cluster:" + str(i),
+                                           text="Cluster:" + str(i),
+                                           marker=pgo.scatter.Marker(symbol='x',
+                                                                     size=12,
+                                                                     color=u_label, opacity=0.5),
+                                           showlegend=True
+                                           )
             trace_arr.append(trace0)
 
         # Represent cluster centers.
         trace1 = pl.graph_objs.Scatter(x=model.cluster_centers_[:, 0],
                                        y=model.cluster_centers_[:, 1],
-                                       name='',
+                                       name='Center of the cluster',
                                        mode='markers',
                                        marker=pgo.scatter.Marker(symbol='x',
                                                                  size=12,
                                                                  color='black'),
-                                       showlegend=False
+                                       showlegend=True
                                        )
         trace_arr.append(trace1)
 
-        layout5 = pgo.Layout(title='Baltimore Vital Signs (PCA)',
+        layout5 = pgo.Layout(title='Data Clusters',
                              xaxis=pgo.layout.XAxis(showgrid=True,
                                                     zeroline=True,
                                                     showticklabels=True),
@@ -91,7 +96,7 @@ class ClusteringControllerHelper:
 
         data7 = pgo.Data(trace_arr)
         layout7 = layout5
-        layout7['title'] = 'Baltimore Vital Signs (PCA and k-means clustering with 7 clusters)'
+        layout7['title'] = 'Data Clusters'
         fig7 = pgo.Figure(data=data7, layout=layout7)
 
         # Plot model
@@ -108,50 +113,128 @@ class ClusteringControllerHelper:
 
         return html_path
 
-    def train_clusterfer(self, docs, categories):
-        try:
-            X_train = self.get_clusterfer_splits(docs)
+    @staticmethod
+    def plot_data_points(df, model, label, model_name='file_name'):
+        # Represent neighborhoods as in previous bubble chart, adding cluster information under color.
+        df = pd.DataFrame(df)
+        df['label'] = label
+        u_label = np.unique(label)
+        trace_arr = []
+        for i in u_label:
+            label_data = df.loc[df['label'] == i]
+            trace0 = pl.graph_objs.Scatter(x=label_data[0],
+                                           y=label_data[1],
+                                           mode="markers",
+                                           name="Cluster:" + str(i),
+                                           text="Cluster:" + str(i),
+                                           marker=pgo.scatter.Marker(symbol='x',
+                                                                     size=12,
+                                                                     color=u_label, opacity=0.5),
+                                           showlegend=True
+                                           )
+            trace_arr.append(trace0)
 
-            vectorized = CountVectorizer(stop_words='english', ngram_range=(1, 3), min_df=3, analyzer='word')
+        # Represent cluster centers.
+        trace1 = pl.graph_objs.Scatter(x=model.cluster_centers_[:, 0],
+                                       y=model.cluster_centers_[:, 1],
+                                       name='Center of the cluster',
+                                       mode='markers',
+                                       marker=pgo.scatter.Marker(symbol='x',
+                                                                 size=12,
+                                                                 color='black'),
+                                       showlegend=True
+                                       )
+        trace_arr.append(trace1)
 
-            # Create doc-term matrix
-            dtm = vectorized.fit_transform(X_train)
+        layout5 = pgo.Layout(title='Data Clusters',
+                             xaxis=pgo.layout.XAxis(showgrid=True,
+                                                    zeroline=True,
+                                                    showticklabels=True),
+                             yaxis=pgo.layout.YAxis(showgrid=True,
+                                                    zeroline=True,
+                                                    showticklabels=True),
+                             hovermode='closest')
 
-            # Train the model
-            clusteringmodelselector = ClusteringModelProcessor()
-            cls = clusteringmodelselector.clusteringmodelselector(6)
+        data7 = pgo.Data(trace_arr)
+        layout7 = layout5
+        layout7['title'] = 'Data Clusters'
+        fig7 = pgo.Figure(data=data7, layout=layout7)
 
-            # Model evaluations
-            controller_helper = ControllersHelper()
-            train_precision, train_recall, train_f1 = self.evaluate_clustfer(cls, vectorized,
-                                                                             X_train, y_train, categories)
-            test_precision, test_recall, test_f1 = self.evaluate_clustfer(cls, vectorized, X_test,
-                                                                          y_test, categories)
+        # Plot model
+        html_file_location = html_plots_location + model_name + ".html"
+        html_path = html_short_path + model_name + ".html"
+        fig = make_subplots(rows=2, cols=1)
+        # 1- clusters
+        for k in range(len(fig7.data)):
+            fig.add_trace(fig7.data[k], row=1, col=1)
+        # 2- Elbow graph
+        # TODO: Add code to implent Elbow function and plot it with the clustering graph
 
-            # store the classifier
-            clf_filename = '%s%s%s' % (clustering_root_path, pkls_location, 'cluterfer_pkl.pkl')
-            pickle.dump(cls, open(clf_filename, 'wb'))
+        pl.offline.plot(fig, filename=html_file_location, config={'displayModeBar': False}, auto_open=False)
 
-            # Store vectorized
-            vic_filename = '%s%s%s' % (clustering_root_path, pkls_location, 'vectorized_pkl.pkl')
-            pickle.dump(vectorized, open(vic_filename, 'wb'))
+        return html_path
 
-            precision = numpy.array([train_precision, test_precision])
-            recall = numpy.array([train_recall, test_recall])
-            f1 = numpy.array([train_f1, test_f1])
+    @staticmethod
+    def plot_elbow_graph(data, model_name='file_name'):
+        data = np.reshape(data, (len(data), 1))
+        mms = MinMaxScaler()
+        mms.fit(data)
+        data_transformed = mms.transform(data)
 
-            all_return_value = {'train_precision': str(precision),
-                                'train_recall': str(recall),
-                                'train_f1': str(f1),
-                                'test_precision': str(precision),
-                                'test_recall': str(recall),
-                                'test_f1': str(f1)}
+        Sum_of_squared_distances = []
+        K = range(1, 15)
+        x_axis = [*K]
+        y_axis = Sum_of_squared_distances
+        for k in K:
+            km = KMeans(n_clusters=k)
+            km = km.fit(data_transformed)
+            Sum_of_squared_distances.append(km.inertia_)
 
-            return all_return_value
+        fig = pgo.Figure(
+            data=[pgo.Scatter(x=x_axis, y=y_axis, line_color="crimson", marker=pgo.scatter.Marker(symbol='x',
+                                                                                                  size=10,
+                                                                                                  color='black'),
+                              name="Elbow Graph",
+                              text="Number of Clusters",
+                              showlegend=True)],
+            layout_title_text="A Graph of suggested number of clusters"
+        )
 
-        except  Exception as e:
-            print(e)
-            return e
+        html_file_location = html_plots_location + model_name + ".html"
+        html_path = html_short_path + model_name + ".html"
+        pl.offline.plot(fig, filename=html_file_location, config={'displayModeBar': False}, auto_open=False)
+
+        return html_path
+
+    @staticmethod
+    def extract_clusters_keywords(model, k, vectorizer):
+        """
+            Extract the keywords of each cluster then save the results in pkl file
+        """
+        order_centroids = model.cluster_centers_.argsort()[:, ::-1]
+        terms = vectorizer.get_feature_names_out()
+        cluster_keywords ={}
+        number_of_keywords = int(config_parser.get('SystemConfigurations', 'SystemConfigurations.number_of_clustering_keywords'))
+        for i in range(k):
+            cluster_name = "Cluster_" + str(i)
+            cluster_terms = ''
+            for j in order_centroids[i, :number_of_keywords]:  # print out 10 feature terms of each cluster
+                cluster_terms = cluster_terms +  terms[j] + ('' if (j == number_of_keywords) else ', ')
+            cluster_keywords[cluster_name] = cluster_terms
+
+        # Save clusters' keywords in pkle file
+        a_file = open(clusters_keywords_file, "wb")
+        pickle.dump(cluster_keywords, a_file)
+        a_file.close()
+
+        return cluster_keywords
+
+    @staticmethod
+    def get_clustering_keywords():
+        with open(clusters_keywords_file, 'rb') as f:
+            loaded_clustering_keywords = pickle.load(f)
+
+        return loaded_clustering_keywords
 
     def evaluate_clustfer(self, classifier, vectorizer, X_test, y_test, categories):
         return 0, 1, 2

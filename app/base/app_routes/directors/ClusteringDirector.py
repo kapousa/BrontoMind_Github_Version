@@ -10,6 +10,7 @@ from base.constants.BM_CONSTANTS import html_short_path
 from bm.apis.v1.APIHelper import APIHelper
 from bm.controllers.BaseController import BaseController
 from bm.controllers.clustering.ClusteringController import ClusteringController
+from bm.controllers.clustering.ClusteringControllerHelper import ClusteringControllerHelper
 from bm.datamanipulation.DataCoderProcessor import DataCoderProcessor
 from bm.db_helper.AttributesHelper import get_labels, get_features, get_model_name
 from bm.controllers.classification.ClassificationController import ClassificationController
@@ -86,21 +87,15 @@ class ClusteringDirector:
                                                             docs_templates_folder,
                                                             output_docs)
 
-            return render_template('applications/pages/classification/textmodelstatus.html',
-                                   fname=return_values['model_name'],
+            return render_template('applications/pages/clustering/modelstatus.html',
+                                   fname=return_values['file_name'],
+                                   clusters_keywords=return_values['clusters_keywords'],
                                    segment='createmodel',
                                    created_on=return_values['created_on'],
                                    updated_on=return_values['updated_on'],
                                    last_run_time=return_values['last_run_time'],
-                                   train_precision=return_values['train_precision'],
-                                   train_recall=return_values['train_recall'],
-                                   train_f1=return_values['train_f1'],
-                                   test_precision=return_values['test_precision'],
-                                   test_recall=return_values['test_recall'],
-                                   test_f1=return_values['test_f1'],
                                    page_url=page_url, page_embed=page_embed,
-                                   most_common=numpy.array(return_values['most_common']),
-                                   categories=numpy.array(return_values['categories']),
+                                   ds_goal=ds_goal, ds_sourc=ds_source,
                                    plot_image_path = html_short_path + "file_name.html"
                                    )
 
@@ -114,7 +109,7 @@ class ClusteringDirector:
 
             page_embed = "<iframe width='500' height='500' src='" + page_url + "'></iframe>"
 
-            return render_template('applications/pages/classification/modelstatus.html',
+            return render_template('applications/pages/clustering/modelstatus.html',
                                        train_precision=model_profile['train_precision'],
                                        train_recall=model_profile['train_recall'],
                                        train_f1=model_profile['train_f1'],
@@ -148,3 +143,16 @@ class ClusteringDirector:
                                ds_goal=profile['ds_goal'],
                                updated_on=profile['updated_on'], last_run_time=profile['last_run_time'],
                                plot_image_path = html_short_path + "file_name.html")
+
+    def show_clustermodel_dashboard(self, request, profile):
+        # Webpage details
+        page_url = request.host_url + "predictevalues"
+        page_embed = "<iframe width='500' height='500' src='" + page_url + "'></iframe>"
+        clusters_keywords = ClusteringControllerHelper.get_clustering_keywords()
+        return render_template('applications/pages/clustering/dashboard.html',
+                               plot_image_path=profile['plot_image_path'], message='No',
+                               fname=profile['model_name'], page_url=page_url, page_embed=page_embed,
+                               segment='showdashboard', created_on=profile['created_on'],
+                               ds_goal=profile['ds_goal'],
+                               clusters_keywords=clusters_keywords,
+                               updated_on=profile['updated_on'], last_run_time=profile['last_run_time'])
