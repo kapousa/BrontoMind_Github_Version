@@ -94,37 +94,46 @@
                 </div>
             </div>
         </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header card-header-primary">
-                    <h2 class="card-title ">Top 15 Clusters' Keywords</h2>
-                    <p class="card-category"></p>
-                </div>
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table"/>
-                        <table class="table align-items-center">
-                            <thead class="thead-light">
-                            <tr>
-                                <th scope="col">Cluster Name</th>
-                                <th scope="col">Keywords</th>
-                            </tr>
-                            </thead>
-                            <tbody class="list">
-                            {% for cluster_keywords in clusters_keywords %}
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <h2 class="card-title ">Top 15 Clusters' Keywords</h2>
+                        <p class="card-category"></p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table"/>
+                            <table class="table align-items-center">
+                                <thead class="thead-light">
                                 <tr>
-                                    <td class="budget"><b>{{ cluster_keywords }}</b></td>
-                                    <td  style="white-space: normal !important;">{{ clusters_keywords[cluster_keywords] }}</td>
+                                    <th scope="col">Cluster Name</th>
+                                    <th scope="col">Keywords</th>
                                 </tr>
-                            {% endfor %}
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody class="list">
+                                {% for cluster_keywords in clusters_keywords %}
+                                    <tr>
+                                        <td class="budget"><b>{{ cluster_keywords }}</b></td>
+                                        <td style="white-space: normal !important;">{{ clusters_keywords[cluster_keywords] }}</td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="form-group">
+                            <form name="downloadlabledfile" method="get" action="/downloadlabledfile">
+                                <button type="submit" class="btn btn-primary pull-right" data-toggle="tooltip"
+                                        data-placement="top"
+                                        title="Download the orginal data after adding its label in the last column (csv format)">
+                                    Download Clustered Data File
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="card card-chart">
@@ -171,7 +180,8 @@
                     </div>
                     <div class="card-body">
                         <h4 class="card-title">APIs</h4>
-                        <p class="card-category">APIs library to integrate your model with other system without any new line
+                        <p class="card-category">APIs library to integrate your model with other system without any new
+                            line
                             of
                             code or hardware needed.</p>
                         <form name="downloadapisdocument" method="get" action="/downloadapisdocument">

@@ -49,5 +49,10 @@ loading_icon_path = os.path.join('images/', 'loading_icon.gif')
 
 progress_icon_path = os.path.join('images/', 'progress_icon_2.gif')
 
+labeled_data_filename_download_path = 'base/output_docs/'
+
+labeled_data_filename = 'data.csv'
+
 demo_key = 'DEMO'
+
 

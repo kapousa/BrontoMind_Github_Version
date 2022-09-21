@@ -1,21 +1,19 @@
 #  Copyright (c) 2022. Slonos Labs. All rights Reserved.
 import ftplib
+import itertools
 import os
 import random
 from calendar import month_name
 from datetime import date
-import numpy as np
-import matplotlib.pyplot as plt
-import itertools
 
+import matplotlib.pyplot as plt
+import numpy
+import numpy as np
 import pandas as pd
 import plotly.graph_objs as go
-
-import numpy
-import plotly.offline
-from flask import flash
 from werkzeug.utils import secure_filename
 
+from app import config_parser
 from app.base.constants.BM_CONSTANTS import html_plots_location, html_short_path, data_files_folder, \
     physical_allowed_extensions
 
@@ -44,7 +42,8 @@ class Helper:
         return np.flip(months_list)
 
     @staticmethod
-    def plot_confusion_matrix_as_image(cm, file_name, target_names, title='Confusion matrix', cmap=None, normalize=True):
+    def plot_confusion_matrix_as_image(cm, file_name, target_names, title='Confusion matrix', cmap=None,
+                                       normalize=True):
         """
         given a sklearn confusion matrix (cm), make a nice plot
 
@@ -126,13 +125,13 @@ class Helper:
         annotations = []
         for i, row in enumerate(cm):
             for j, value in enumerate(row):
-                if(i < len(labels) and j < len(labels)):
+                if (i < len(labels) and j < len(labels)):
                     annotations.append(
                         {
                             "x": labels[i],
                             "y": labels[j],
                             "font": {"color": "white"},
-                            "text": str(round(value/cm_sum,3)) + '%',
+                            "text": str(round(value / cm_sum, 3)) + '%',
                             "xref": "x1",
                             "yref": "y1",
                             "showarrow": False,
@@ -194,6 +193,16 @@ class Helper:
         data = pd.read_csv(filePath)
 
         return data
+
+    @staticmethod
+    def display_property(property_key):
+        """
+        Display the value of provided property key from the properties file
+        @param property_key: property's key
+        @return: value of the provided property's key
+        """
+        split_property = property_key.split('.')
+        return config_parser.get(split_property[0], property_key)
 
 # h = Helper()
 # con = {

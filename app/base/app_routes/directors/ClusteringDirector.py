@@ -1,12 +1,14 @@
 import os
 
 import numpy
-from flask import render_template, request, current_app, session
+from flask import render_template, request, current_app, session, send_file
 
-from app.base.constants.BM_CONSTANTS import progress_icon_path, loading_icon_path, docs_templates_folder, output_docs
+from app.base.constants.BM_CONSTANTS import progress_icon_path, loading_icon_path, docs_templates_folder, output_docs, \
+    labeled_data_filename, labeled_data_filename_download_path
 from app.base.db_models.ModelAPIDetails import ModelAPIDetails
 from app.base.db_models.ModelProfile import ModelProfile
-from base.constants.BM_CONSTANTS import html_short_path
+
+from base.constants.BM_CONSTANTS import html_short_path, output_docs_location
 from bm.apis.v1.APIHelper import APIHelper
 from bm.controllers.BaseController import BaseController
 from bm.controllers.clustering.ClusteringController import ClusteringController
@@ -156,3 +158,13 @@ class ClusteringDirector:
                                ds_goal=profile['ds_goal'],
                                clusters_keywords=clusters_keywords,
                                updated_on=profile['updated_on'], last_run_time=profile['last_run_time'])
+
+    @staticmethod
+    def download_labeled_datafile():
+        """
+        Download the labeled data file
+        @param request:
+        @return:
+        """
+        path = "%s%s" %  (labeled_data_filename_download_path, labeled_data_filename)
+        return send_file(path, as_attachment=True)

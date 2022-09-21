@@ -79,7 +79,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header card-header-primary">
-                    <h2 class="card-title ">Top 15 Clusters' Keywords</h2>
+                    <h2 class="card-title ">Top 25 Clusters' Keywords</h2>
                     <p class="card-category"></p>
                 </div>
                 <div class="card-body">
@@ -96,11 +96,20 @@
                             {% for cluster_keywords in clusters_keywords %}
                                 <tr>
                                     <td class="budget"><b>{{ cluster_keywords }}</b></td>
-                                    <td  style="white-space: normal !important;">{{ clusters_keywords[cluster_keywords] }}</td>
+                                    <td style="white-space: normal !important;">{{ clusters_keywords[cluster_keywords] }}</td>
                                 </tr>
                             {% endfor %}
                             </tbody>
                         </table>
+                    </div>
+                    <div class="form-group">
+                        <form name="downloadlabledfile" method="get" action="/downloadlabledfile">
+                            <button type="submit" class="btn btn-primary pull-right" data-toggle="tooltip"
+                                    data-placement="top"
+                                    title="Download the orginal data after adding its label in the last column (csv format)">
+                                Download Clustered Data File
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -143,7 +152,7 @@
         <div class="card card-chart">
             <div class="card-header card-header-warning">
                 <div>
-                    <h4 class="card-title ">Integrate woth other systems</h4>
+                    <h4 class="card-title ">Integrate with other systems</h4>
                 </div>
             </div>
             <div class="card-body">

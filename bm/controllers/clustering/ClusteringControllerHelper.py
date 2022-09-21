@@ -11,14 +11,11 @@ import plotly.graph_objs as pgo
 from nltk.corpus import stopwords
 from plotly.subplots import make_subplots
 from sklearn.cluster import KMeans
-from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.preprocessing import MinMaxScaler
 
 from app import config_parser
-from app.base.constants.BM_CONSTANTS import html_plots_location, html_short_path, pkls_location, \
-    clustering_root_path, df_location, clusters_keywords_file
-from bm.controllers.ControllersHelper import ControllersHelper
-from bm.core.engine.processors.ClusteringModelProcessor import ClusteringModelProcessor
+from app.base.constants.BM_CONSTANTS import html_plots_location, html_short_path, df_location, clusters_keywords_file, \
+    output_docs_location, labeled_data_filename
 from bm.utiles.Helper import Helper
 
 
@@ -213,13 +210,14 @@ class ClusteringControllerHelper:
         """
         order_centroids = model.cluster_centers_.argsort()[:, ::-1]
         terms = vectorizer.get_feature_names_out()
-        cluster_keywords ={}
-        number_of_keywords = int(config_parser.get('SystemConfigurations', 'SystemConfigurations.number_of_clustering_keywords'))
+        cluster_keywords = {}
+        number_of_keywords = int(
+            config_parser.get('SystemConfigurations', 'SystemConfigurations.number_of_clustering_keywords'))
         for i in range(k):
             cluster_name = "Cluster_" + str(i)
             cluster_terms = ''
             for j in order_centroids[i, :number_of_keywords]:  # print out 10 feature terms of each cluster
-                cluster_terms = cluster_terms +  terms[j] + ('' if (j == number_of_keywords) else ', ')
+                cluster_terms = cluster_terms + terms[j] + ('' if (j == number_of_keywords) else ', ')
             cluster_keywords[cluster_name] = cluster_terms
 
         # Save clusters' keywords in pkle file
@@ -318,3 +316,23 @@ class ClusteringControllerHelper:
         except  Exception as e:
             print(e)
             return 0
+
+    @staticmethod
+    def generate_labeled_datafile(file_name, labels: []):
+        """
+        Create csv file with label column from data file of unlabeled data
+        @param file_name:
+        @param labels:
+        @return: path of updated data file
+        """
+        try:
+            data_file_location = "%s%s" % (df_location, file_name)
+            updated_data_file_location = "%s%s" % (output_docs_location, labeled_data_filename)
+
+            df = pd.read_csv(data_file_location)
+            df['label'] = labels
+            df.to_csv(updated_data_file_location, index=False)
+
+            return updated_data_file_location
+        except Exception as e:
+            return Helper.display_property('ErrorMessages.fail_create_updated_data_file')

@@ -1,35 +1,27 @@
-from datetime import datetime
 import os
 import pickle
 import random
-import shutil
+from datetime import datetime
 from random import randint
-import seaborn as sns
-import numpy
+
 import pandas as pd
 # from app import config_parser
 from flask import session
-from sklearn.decomposition import PCA
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.preprocessing import StandardScaler
 
 from app import db
 from app.base.db_models.ModelProfile import ModelProfile
-from base.constants.BM_CONSTANTS import scalars_location, pkls_location, plot_locations, plot_zip_locations, \
-    image_short_path, classification_root_path, clustering_root_path, data_files_folder, df_location
+from base.constants.BM_CONSTANTS import pkls_location, plot_locations, plot_zip_locations, \
+    clustering_root_path, data_files_folder, df_location
 from bm.controllers.ControllersHelper import ControllersHelper
 from bm.controllers.clustering.ClusteringControllerHelper import ClusteringControllerHelper
 from bm.core.ModelProcessor import ModelProcessor
-from bm.datamanipulation.AdjustDataFrame import remove_null_values, convert_data_to_sample
-from bm.datamanipulation.DataCoderProcessor import DataCoderProcessor
-from bm.db_helper.AttributesHelper import delete_encoded_columns, add_features, add_labels, add_api_details, \
+from bm.db_helper.AttributesHelper import add_features, add_labels, add_api_details, \
     update_api_details_id
-from bm.utiles.CVSReader import getcvsheader, get_only_file_name
 from bm.utiles.Helper import Helper
 
 
 class ClusteringController:
-
     members = []
 
     def __init__(self):
@@ -71,9 +63,9 @@ class ClusteringController:
             X_train = pd.read_pickle(full_file_path)
             # dcp = DataCoderProcessor()
             # real_x = dcp.vectrise_feature_text(model_id, X_train)
-            #pca = PCA(2)
+            # pca = PCA(2)
             # Transform the data
-            #real_x = pca.fit_transform(real_x)
+            # real_x = pca.fit_transform(real_x)
             documents = X_train[featuresdvalues].values.astype("U")
             documents = documents.flatten()
 
@@ -85,6 +77,7 @@ class ClusteringController:
             cls = mp.clustering_model_selector()
             model = cls.fit(features)
             X_train['cluster'] = model.labels_
+            data_file_location = ClusteringControllerHelper.generate_labeled_datafile(session['fname'], model.labels_)  # Add label column to orginal data file
 
             model_file_name = pkls_location + file_name + '_model.pkl'
             pickle.dump(cls, open(model_file_name, 'wb'))
@@ -98,7 +91,7 @@ class ClusteringController:
 
             # Show Elbow graph and get clusters' keywords
             html_path = ClusteringControllerHelper.plot_elbow_graph(features.data)
-            #html_path = ClusteringControllerHelper.plot_clustering_report(features.data, model, model.labels_, file_name)
+            # html_path = ClusteringControllerHelper.plot_clustering_report(features.data, model, model.labels_, file_name)
             clusters_keywords = ClusteringControllerHelper.extract_clusters_keywords(model, 5, vectorizer)
 
             # ------------------Predict values from the model-------------------------#
@@ -107,7 +100,8 @@ class ClusteringController:
                                  'clusters_keywords': clusters_keywords,
                                  'created_on': now.strftime("%d/%m/%Y %H:%M:%S"),
                                  'updated_on': now.strftime("%d/%m/%Y %H:%M:%S"),
-                                 'last_run_time': now.strftime("%d/%m/%Y %H:%M:%S")}
+                                 'last_run_time': now.strftime("%d/%m/%Y %H:%M:%S"),
+                                 'data_file_location': data_file_location}
 
             # Add model profile to the database
             modelmodel = {'model_id': model_id,
@@ -148,5 +142,3 @@ class ClusteringController:
         except Exception as e:
             return {}
             # return config_parser.get('ErrorMessages', 'ErrorMessages.fail_create_model')
-
-
