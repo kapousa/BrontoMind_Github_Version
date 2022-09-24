@@ -51,6 +51,7 @@ class APIHelper:
         :param output_pdf_folder: 
         :return: Success = 1, Fail= error
         """
+        aa = session['ds_goal']
         api_methods_ids = ModelAPIMethods.query.with_entities(ModelAPIMethods.api_method_id).filter(ModelAPIMethods.model_goal == session['ds_goal']).all()
         api_methods_ids_arr = numpy.array(api_methods_ids).flatten()
         generate_apis_request_sample = self.generate_api_method_reqres_samples(api_methods_ids_arr)

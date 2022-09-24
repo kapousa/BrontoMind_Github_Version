@@ -234,6 +234,18 @@ class ClusteringControllerHelper:
 
         return loaded_clustering_keywords
 
+    @staticmethod
+    def get_cluster_keywords(cluster):
+        """
+        Return arra of keywords of provided cluster
+        @param cluster:
+        @return:
+        """
+        clusters_keywords = ClusteringControllerHelper.get_clustering_keywords()
+        cluster_keywords = clusters_keywords['Cluster_' + str(cluster)]
+
+        return cluster_keywords
+
     def evaluate_clustfer(self, classifier, vectorizer, X_test, y_test, categories):
         return 0, 1, 2
 
@@ -267,20 +279,6 @@ class ClusteringControllerHelper:
             df = pd.read_csv(csv_file_path)
             df = df.loc[:, features_list]
             output_file = '%s%s' % (df_location, 'data.pkl')
-            # file_data = []
-            # if os.path.exists(output_file):
-            #     os.remove(output_file)
-            # # Create reader object by passing the file
-            # # object to reader method
-            # with open(csv_file_path, 'r') as read_obj:
-            #     csv_dict_reader = DictReader(read_obj)
-            #     for row in csv_dict_reader:
-            #         data_row = []
-            #         for key, value in row.items():
-            #             data_row.append(value)
-            #         if (data_row[0] != ''):
-            #             file_data.append(value)
-            # df = pd.DataFrame(file_data)
             df.to_pickle(output_file)
 
             return 1

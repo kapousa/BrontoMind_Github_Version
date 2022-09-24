@@ -16,7 +16,6 @@ class BaseController:
     def __init__(self):
         self.test_value = '_'
 
-
     def delet_model(self):
         try:
             ModelEncodedColumns.query.filter().delete()

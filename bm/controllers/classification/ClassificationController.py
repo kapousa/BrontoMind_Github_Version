@@ -19,7 +19,7 @@ from sklearn.preprocessing import StandardScaler
 from app import db
 from app.base.constants.BM_CONSTANTS import plot_zip_locations, pkls_location, df_location, \
     plot_locations, scalars_location, image_short_path, data_files_folder, \
-    classification_root_path
+    app_root_path
 from app.base.db_models.ModelProfile import ModelProfile
 from bm.controllers.BaseController import BaseController
 from bm.controllers.ControllersHelper import ControllersHelper
@@ -240,7 +240,7 @@ class ClassificationController:
             helper = Helper()
             # Prepare the date and creating the classifier model
             classificationcontrollerHelper = ClassificationControllerHelper()
-            files_path = '%s%s' % (classification_root_path, data_files_folder)
+            files_path = '%s%s' % (app_root_path, data_files_folder)
 
             # Create datafile (data.txt)
             if (is_local_data == 'Yes'):
@@ -256,7 +256,7 @@ class ClassificationController:
                     location_details)  # classificationcontrollerHelper.get_folder_structure(files_path, req_extensions=('.txt'))
                 data_set = classificationcontrollerHelper.create_FTP_data_set(location_details, folders_list)
 
-            full_file_path = '%s%s%s' % (classification_root_path, data_files_folder, 'data.txt')
+            full_file_path = '%s%s%s' % (app_root_path, data_files_folder, 'data.txt')
             docs = classificationcontrollerHelper.setup_docs(full_file_path)
             categories, most_common = classificationcontrollerHelper.print_frequency_dist(docs)
             # X_train, X_test, y_train, y_test = classificationcontrollerHelper.get_splits(docs)
@@ -299,6 +299,7 @@ class ClassificationController:
             # db.close_all_sessions
 
             # APIs details and create APIs document
+
             return_values = {
                 'model_name': 'data',
                 'segment': 'createmodel',

@@ -29,7 +29,7 @@ image_location = 'app/'
 
 root_path = '../app/'
 
-classification_root_path = 'app/'
+app_root_path = 'app/'
 
 clustering_root_path = 'app/'
 

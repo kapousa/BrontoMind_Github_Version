@@ -6,6 +6,9 @@ Copyright (c) 2019 - present AppSeed.us
 import os
 from decouple import config
 
+from app import config_parser
+
+
 class Config(object):
 
     basedir = os.path.abspath(os.path.dirname(__file__))
@@ -22,12 +25,18 @@ class Config(object):
     DEMO_KEY = config('DEMO_KEY', default='DEMO')
 
     # System modules
-    PREDICTION_MODULE = '7'
-    FORECASTING_MODULE = '8'
-    ROBOTIC_MODULE = '9'
-    CLASSIFICATION_MODULE = '10'
-    FILES_CLASSIFICATION_MODULE = '11'
-    CLUSTERING_MODULE = '12'
+    # PREDICTION_MODULE = '7'
+    # FORECASTING_MODULE = '8'
+    # ROBOTIC_MODULE = '9'
+    # CLASSIFICATION_MODULE = '10'
+    # FILES_CLASSIFICATION_MODULE = '11'
+    # CLUSTERING_MODULE = '12'
+    PREDICTION_MODULE = config_parser.get('SystemConfigurations', 'SystemConfigurations.prediction_module')
+    FORECASTING_MODULE = config_parser.get('SystemConfigurations', 'SystemConfigurations.forecasting_module')
+    ROBOTIC_MODULE = config_parser.get('SystemConfigurations', 'SystemConfigurations.robotic_module')
+    CLASSIFICATION_MODULE = config_parser.get('SystemConfigurations', 'SystemConfigurations.classification_module')
+    FILES_CLASSIFICATION_MODULE = config_parser.get('SystemConfigurations', 'SystemConfigurations.files_classification_module')
+    CLUSTERING_MODULE = config_parser.get('SystemConfigurations', 'SystemConfigurations.clustering_module')
 
 class ProductionConfig(Config):
     DEBUG = True

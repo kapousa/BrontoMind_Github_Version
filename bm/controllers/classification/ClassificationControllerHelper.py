@@ -22,7 +22,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics import precision_score, recall_score, f1_score, confusion_matrix, classification_report
 from sklearn.naive_bayes import MultinomialNB
 
-from app.base.constants.BM_CONSTANTS import html_plots_location, html_short_path, classification_root_path, \
+from app.base.constants.BM_CONSTANTS import html_plots_location, html_short_path, app_root_path, \
     pkls_location, \
     data_files_folder, df_location
 from bm.utiles.Helper import Helper
@@ -91,8 +91,8 @@ class ClassificationControllerHelper:
     def create_csv_data_file(self, output_csv_file_name: 'data.csv',
                              header: ['label', 'file_name', 'text'],
                              req_extensions):
-        csv_folder_location = '%s%s' % (classification_root_path, data_files_folder)
-        csv_file_location = '%s%s%s' % (classification_root_path, data_files_folder, output_csv_file_name)
+        csv_folder_location = '%s%s' % (app_root_path, data_files_folder)
+        csv_file_location = '%s%s%s' % (app_root_path, data_files_folder, output_csv_file_name)
         data = self.create_txt_data_file(csv_folder_location, req_extensions)
         with open(csv_file_location, 'w', encoding='UTF8', newline='') as f:
             writer = csv.writer(f)
@@ -345,11 +345,11 @@ class ClassificationControllerHelper:
                                                                             y_test, categories)
 
             # store the classifier
-            clf_filename = '%s%s%s' % (classification_root_path, pkls_location, 'classifier_pkl.pkl')
+            clf_filename = '%s%s%s' % (app_root_path, pkls_location, 'classifier_pkl.pkl')
             pickle.dump(naive_bays_classifier, open(clf_filename, 'wb'))
 
             # Store vectorized
-            vic_filename = '%s%s%s' % (classification_root_path, pkls_location, 'vectorized_pkl.pkl')
+            vic_filename = '%s%s%s' % (app_root_path, pkls_location, 'vectorized_pkl.pkl')
             pickle.dump(vectorized, open(vic_filename, 'wb'))
 
             precision = numpy.array([train_precision, test_precision])
@@ -403,11 +403,11 @@ class ClassificationControllerHelper:
 
     def classify(self, text):
         # Load model
-        clf_filename = '%s%s%s' % (classification_root_path, pkls_location, '/classifier_pkl.pkl')
+        clf_filename = '%s%s%s' % (app_root_path, pkls_location, '/classifier_pkl.pkl')
         np_clf = pickle.load(open(clf_filename, 'rb'))
 
         # load vectorizer
-        vec_filename = '%s%s%s' % (classification_root_path, pkls_location, '/vectorized_pkl.pkl')
+        vec_filename = '%s%s%s' % (app_root_path, pkls_location, '/vectorized_pkl.pkl')
         vectorizer = pickle.load(open(vec_filename, 'rb'))
 
         pred = np_clf.predict(vectorizer.transform([text]))

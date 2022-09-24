@@ -74,7 +74,7 @@ class ClusteringDirector:
                 'password': request.form.get('session_token')
             }
             is_local_data = request.form.get('is_local_data') if session['is_local_data'] != 'csv' else session['is_local_data']
-            page_url = request.host_url + "predictevalues?t=" + ds_goal + "&s=" + ds_source
+            page_url = request.host_url + "getdatacluster?t=" + ds_goal + "&s=" + ds_source
             page_embed = "<iframe width='500' height='500' src='" + page_url + "'></iframe>"
             clustering_features = numpy.array((request.form.getlist('clustering_features')))
             clusteringcontroller = ClusteringController()
@@ -107,7 +107,7 @@ class ClusteringDirector:
     def show_model_status(self):
         try:
             model_profile = BaseController.get_model_status()
-            page_url = request.host_url + "predictevalues"
+            page_url = request.host_url + "getdatacluster"
 
             page_embed = "<iframe width='500' height='500' src='" + page_url + "'></iframe>"
 
@@ -129,7 +129,7 @@ class ClusteringDirector:
 
     def show_text_model_dashboard(self):
         profile = BaseController.get_model_status()
-        page_url = request.host_url + "predictevalues?t=" + str(profile['ds_goal']) + "&s=" + str(profile['ds_source'])
+        page_url = request.host_url + "getdatacluster?t=" + str(profile['ds_goal']) + "&s=" + str(profile['ds_source'])
         page_embed = "<iframe width='500' height='500' src='" + page_url + "'></iframe>"
 
         return render_template('applications/pages/classification/textdashboard.html',
@@ -148,7 +148,7 @@ class ClusteringDirector:
 
     def show_clustermodel_dashboard(self, request, profile):
         # Webpage details
-        page_url = request.host_url + "predictevalues"
+        page_url = request.host_url + "getdatacluster"
         page_embed = "<iframe width='500' height='500' src='" + page_url + "'></iframe>"
         clusters_keywords = ClusteringControllerHelper.get_clustering_keywords()
         return render_template('applications/pages/clustering/dashboard.html',
@@ -166,5 +166,35 @@ class ClusteringDirector:
         @param request:
         @return:
         """
-        path = "%s%s" %  (labeled_data_filename_download_path, labeled_data_filename)
-        return send_file(path, as_attachment=True)
+        try:
+            path = "%s%s" %  (labeled_data_filename_download_path, labeled_data_filename)
+            return send_file(path, as_attachment=True)
+
+        except Exception as e:
+            return render_template('page-501.html', error=e, segment='message')
+
+    def get_clusters(self, request):
+        """
+        Get cluster of provided data
+        @param request:
+        @return: Cluster name
+        """
+        try:
+            opt_param = len(request.form)
+            ds_goal = request.args.get("t")
+            ds_source = request.args.get("s")
+
+            if opt_param == 0:
+                # response = make_response()
+                return render_template('applications/pages/clustering/clusterdata.html', ds_goal=ds_goal, ds_source=ds_source, testing_values='nothing',
+                                       clusters_data=[], predicted='Nothing', message='No')
+            else:
+                data = (request.form.get('text_value')).lstrip()
+                clusteringcontroller = ClusteringController()
+                clusters_dic = clusteringcontroller.get_data_cluster([data])
+                return render_template('applications/pages/clustering/clusterdata.html', ds_goal=ds_goal, ds_source=ds_source, testing_values=data,
+                                       clusters_dic=clusters_dic, predicted='Yes', message='No')
+
+            return clusters
+        except Exception as e:
+            return render_template('page-501.html', error=e, segment='message')

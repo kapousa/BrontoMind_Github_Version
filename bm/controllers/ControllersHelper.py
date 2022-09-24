@@ -16,8 +16,9 @@ import plotly.express as px
 import seaborn as sns
 from nltk import word_tokenize, FreqDist
 from nltk.corpus import stopwords
+from sklearn.preprocessing import MinMaxScaler
 
-from app.base.constants.BM_CONSTANTS import html_plots_location, html_short_path, classification_root_path, \
+from app.base.constants.BM_CONSTANTS import html_plots_location, html_short_path, app_root_path, \
     data_files_folder, df_location
 from bm.utiles.Helper import Helper
 
@@ -76,8 +77,8 @@ class ControllersHelper:
 
     def create_csv_data_file(self, output_csv_file_name: 'data.csv', header: ['label', 'file_name', 'text'],
                              req_extensions):
-        csv_folder_location = '%s%s' % (classification_root_path, data_files_folder)
-        csv_file_location = '%s%s%s' % (classification_root_path, data_files_folder, output_csv_file_name)
+        csv_folder_location = '%s%s' % (app_root_path, data_files_folder)
+        csv_file_location = '%s%s%s' % (app_root_path, data_files_folder, output_csv_file_name)
         data = self.create_txt_data_file(csv_folder_location, req_extensions)
         with open(csv_file_location, 'w', encoding='UTF8', newline='') as f:
             writer = csv.writer(f)
@@ -243,3 +244,19 @@ class ControllersHelper:
         text = text.lower()
         return text
 
+    @staticmethod
+    def scale_data(data):
+        """
+        Adjust dataframe to standard scale
+        @param data: original dataframe
+        @return: data_transformed - scaled dataframe
+        """
+        # Sclaing testing values
+        scalar_file_name = scalars_location + model_file_name + '_scalear.sav'
+        s_c = pickle.load(open(scalar_file_name, 'rb'))
+        test_x = s_c.transform(encode_df_testing_values)
+        mms = MinMaxScaler()
+        mms.fit(data)
+        data_transformed = mms.transform(data)
+
+        return data_transformed
