@@ -31374,3 +31374,809 @@ INFO:werkzeug:127.0.0.1 - - [24/Sep/2022 14:56:13] "[36mGET /static/assets/img/
 INFO:werkzeug:127.0.0.1 - - [24/Sep/2022 14:56:13] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [24/Sep/2022 14:56:13] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [24/Sep/2022 14:56:13] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 304 -
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:47] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:47] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:47] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:47] "GET /static/assets/img/brand/white.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:47] "GET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:47] "GET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:47] "GET /static/assets/img/brand/blue.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:47] "GET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:47] "GET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:47] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:47] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:47] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:47] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:47] "[31m[1mGET /favicon.ico HTTP/1.1[0m" 403 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:48] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:48] "GET /static/images/loading1.gif HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:48] "[36mGET /static/assets/vendor/nucleo/fonts/nucleo-icons.woff2 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:48] "GET /static/assets/vendor/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:53] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:53] "GET /showdashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:53] "GET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:53] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:53] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:53] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:53] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:53] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:53] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:53] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:53] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:53] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:53] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:53] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:53] "GET /static/assets/img/theme/team-1.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:53] "GET /static/assets/img/theme/team-2.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:53] "GET /static/assets/img/theme/team-3.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:53] "GET /static/assets/img/theme/team-4.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:53] "GET /static/assets/img/theme/team-5.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:54] "GET /static/images/loading2.gif HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:05:54] "GET /static/assets/vendor/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:01] "POST /deletemodel HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:01] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:01] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:01] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:01] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:01] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:01] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:01] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:01] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:01] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:01] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:01] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:01] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:01] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:01] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:01] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:01] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:01] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:01] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:03] "GET /selectmodelgoal HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:03] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:03] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:03] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:03] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:03] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:03] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:03] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:03] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:03] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:03] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:03] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:03] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:03] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:03] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:03] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:03] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:03] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:03] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:23] "GET /createmodel?t=13 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:23] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:23] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:23] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:23] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:23] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:23] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:23] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:23] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:23] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:23] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:24] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:24] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:24] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:24] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:24] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:24] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:24] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:24] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:25] "POST /selectcsvds HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:25] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:25] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:25] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:25] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:25] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:25] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:25] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:25] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:25] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:25] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:25] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:25] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:25] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:25] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:25] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:25] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:25] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:06:25] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:07:50] "POST /uploadcsvds HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:07:50] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:07:50] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:07:50] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:07:50] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:07:50] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:07:50] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:07:50] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:07:50] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:07:50] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:07:50] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:07:50] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:07:50] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:07:50] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:07:50] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:07:50] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:07:50] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:07:50] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:07:50] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:08:13] "POST /creatingthemodel HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:08:13] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:08:13] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:08:13] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:08:13] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:08:13] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:08:13] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:08:13] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:08:13] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:08:13] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:08:13] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:08:13] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:08:13] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:08:13] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:08:13] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:08:13] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:08:13] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:08:13] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:08:13] "GET /static/images/loading_icon.gif HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:08:13] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:11:19] "POST /sendvalues HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:11:19] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:11:19] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:11:19] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:11:19] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:11:19] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:11:19] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:11:19] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:11:19] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:11:19] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:11:19] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:11:19] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:11:19] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:11:19] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:11:19] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:11:19] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:11:19] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:11:19] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:11:19] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:11:31] "GET /downloadapisdocument HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:47] "POST /deletemodel HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:47] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:47] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:47] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:47] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:47] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:47] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:47] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:47] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:47] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:47] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:47] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:47] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:47] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:47] "[36mGET /static/assets/vendor/nucleo/fonts/nucleo-icons.woff2 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:47] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:47] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:47] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:47] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:47] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:47] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:48] "GET /selectmodelgoal HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:48] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:48] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:48] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:48] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:48] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:48] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:48] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:49] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:49] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:49] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:49] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:49] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:49] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:49] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:49] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:49] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:49] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:49] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:51] "GET /createmodel?t=7 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:51] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:51] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:51] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:51] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:51] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:51] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:51] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:51] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:51] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:51] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:51] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:51] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:51] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:51] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:51] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:51] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:51] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:51] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:52] "POST /selectcsvds HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:52] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:52] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:52] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:52] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:52] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:53] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:53] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:53] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:53] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:53] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:53] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:53] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:53] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:53] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:53] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:53] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:53] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:26:53] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:03] "POST /uploadcsvds HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:03] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:03] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:03] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:03] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:03] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:03] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:03] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:03] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:03] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:03] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:03] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:03] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:03] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:03] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:03] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:03] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:03] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:03] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:16] "POST /creatingthemodel HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:16] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:16] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:16] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:16] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:16] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:16] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:16] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:16] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:16] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:16] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:16] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:16] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:16] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:16] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:16] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:16] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:16] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:16] "[36mGET /static/images/loading_icon.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:16] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:20] "POST /sendvalues HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:20] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:20] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:20] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:20] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:20] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:20] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:20] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:20] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:20] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:20] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:20] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:20] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:20] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:20] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:20] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:20] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:20] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:27:20] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/Users/kapo/PycharmProjects/BrontoMind_Github_Version/bm/controllers/clustering/ClusteringController.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
+INFO:werkzeug: * Detected change in '/Users/kapo/PycharmProjects/BrontoMind_Github_Version/bm/apis/v1/APIsclassificationServices.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:00] "POST /deletemodel HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:00] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:00] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:00] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:00] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:00] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:00] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:00] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:00] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:00] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:00] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:00] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:00] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:00] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:00] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:00] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:00] "[36mGET /static/assets/vendor/nucleo/fonts/nucleo-icons.woff2 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:00] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:00] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:00] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:00] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:01] "GET /selectmodelgoal HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:01] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:01] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:01] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:01] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:01] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:01] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:01] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:01] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:01] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:01] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:01] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:01] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:01] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:02] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:02] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:02] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:02] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:02] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:04] "GET /createmodel?t=13 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:04] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:04] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:04] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:04] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:04] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:04] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:04] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:04] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:04] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:04] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:04] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:04] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:04] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:04] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:04] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:04] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:04] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:04] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:05] "POST /selectcsvds HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:05] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:05] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:05] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:05] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:05] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:05] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:05] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:05] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:05] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:05] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:05] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:05] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:05] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:05] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:05] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:05] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:05] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:05] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:35] "POST /uploadcsvds HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:35] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:35] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:35] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:35] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:35] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:35] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:35] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:35] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:35] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:35] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:35] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:35] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:35] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:35] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:35] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:35] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:35] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:50:35] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:51:32] "POST /creatingthemodel HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:51:32] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:51:32] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:51:32] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:51:32] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:51:32] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:51:32] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:51:32] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:51:32] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:51:32] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:51:32] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:51:32] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:51:32] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:51:32] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:51:32] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:51:32] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:51:32] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:51:32] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:51:32] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:51:32] "[36mGET /static/images/loading_icon.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:53:49] "POST /sendvalues HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:53:49] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:53:49] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:53:49] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:53:49] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:53:49] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:53:49] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:53:49] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:53:49] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:53:49] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:53:49] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:53:49] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:53:49] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:53:49] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:53:49] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:53:49] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:53:49] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:53:49] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:53:49] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:54:26] "GET /getdatacluster?t=13&s=1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:54:26] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:54:26] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:54:26] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:54:26] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:54:26] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:54:26] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:54:26] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:54:26] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:54:26] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:54:51] "POST /getdatacluster?t=13&s=1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:54:51] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:54:51] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:54:51] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:54:51] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:54:51] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:54:51] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:54:51] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:54:51] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 15:54:51] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/Users/kapo/PycharmProjects/BrontoMind_Github_Version/apis/routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 16:51:47] "[33mPOST /api/v1/clusterdata HTTP/1.1[0m" 404 -
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 16:52:21] "[33mPOST /api/v1/clusterdata HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in '/Users/kapo/PycharmProjects/BrontoMind_Github_Version/apis/routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 16:53:42] "[33mPOST /api/v1/labeldata HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 16:54:41] "[33mPOST /api/v1/labeldata HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in '/Users/kapo/PycharmProjects/BrontoMind_Github_Version/apis/routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 16:56:00] "[35m[1mPOST /api/v1/classifydata HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 16:56:23] "[33mPOST /api/v1/labeldata HTTP/1.1[0m" 404 -
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 16:57:39] "GET /showdashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 16:57:39] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 16:57:39] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 16:57:39] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 16:57:39] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 16:57:39] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 16:57:39] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 16:57:39] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 16:57:39] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 16:57:39] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 16:57:39] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 16:57:39] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 16:57:39] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 16:57:39] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 16:57:39] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 16:57:39] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 16:57:39] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 16:57:39] "[36mGET /static/assets/vendor/nucleo/fonts/nucleo-icons.woff2 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 16:57:39] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 16:57:39] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 16:57:39] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 304 -
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:00:12] "[33mPOST /api/v1/labeldata HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:00:56] "[33mPOST /api/v1/labeldata HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:00:57] "[33mPOST /api/v1/labeldata HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:00:58] "[33mPOST /api/v1/labeldata HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:01:19] "[35m[1mPOST /api/v1/classifydata HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in '/Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/apis/routes.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:05:50] "[35m[1mPOST /api/v1/labeldata HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:09:40] "[35m[1mPOST /api/v1/labeldata HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:39] "POST /deletemodel HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:40] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:40] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:40] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:40] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:40] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:40] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:40] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:40] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:40] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:40] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:40] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:40] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:40] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:40] "[36mGET /static/assets/vendor/nucleo/fonts/nucleo-icons.woff2 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:40] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:40] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:40] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:40] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:40] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:40] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:41] "GET /selectmodelgoal HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:41] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:41] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:41] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:41] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:41] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:41] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:41] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:41] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:41] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:41] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:41] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:41] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:41] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:41] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:41] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:41] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:41] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:41] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:42] "GET /createmodel?t=13 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:42] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:42] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:42] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:42] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:42] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:42] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:42] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:42] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:42] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:42] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:42] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:42] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:42] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:42] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:42] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:42] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:42] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:42] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:44] "POST /selectcsvds HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:44] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:44] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:44] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:44] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:44] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:44] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:44] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:44] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:44] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:44] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:44] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:44] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:44] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:44] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:44] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:44] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:44] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:10:44] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:09] "POST /uploadcsvds HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:09] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:09] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:09] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:09] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:09] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:09] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:09] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:09] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:09] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:09] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:09] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:09] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:09] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:09] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:09] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:09] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:09] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:09] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:13] "POST /creatingthemodel HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:13] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:13] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:13] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:13] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:13] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:13] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:13] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:13] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:13] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:13] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:13] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:13] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:13] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:13] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:13] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:13] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:13] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:13] "[36mGET /static/images/loading_icon.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:11:13] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:13:36] "POST /sendvalues HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:13:36] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:13:36] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:13:36] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:13:36] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:13:36] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:13:36] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:13:36] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:13:36] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:13:36] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:13:36] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:13:36] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:13:36] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:13:36] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:13:36] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:13:36] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:13:36] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:13:36] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:13:36] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/Users/kapo/PycharmProjects/BrontoMind_Github_Version/bm/controllers/clustering/ClusteringController.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in '/Users/kapo/PycharmProjects/BrontoMind_Github_Version/bm/controllers/clustering/ClusteringController.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:21:25] "POST /sendvalues HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:21:25] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:21:25] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:21:25] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:21:25] "[36mGET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:21:25] "[36mGET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:21:25] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:21:25] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:21:25] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:21:25] "[36mGET /static/assets/vendor/nucleo/fonts/nucleo-icons.woff2 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:21:26] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:21:26] "[36mGET /static/images/loading2.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:21:26] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:21:26] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:21:26] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:21:26] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:21:26] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:21:26] "[36mGET /static/assets/img/theme/team-1.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:21:26] "[36mGET /static/assets/img/theme/team-2.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:21:26] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:21:26] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:21:26] "GET /static/assets/img/brand/favicon.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:22:32] "[35m[1mPOST /api/v1/labeldata HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in '/Users/kapo/PycharmProjects/BrontoMind_Github_Version/bm/apis/v1/APIsClusteringServices.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:24:32] "[35m[1mPOST /api/v1/labeldata HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:26:42] "[35m[1mPOST /api/v1/labeldata HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in '/Users/kapo/PycharmProjects/BrontoMind_Github_Version/bm/apis/v1/APIsClusteringServices.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:28:46] "[35m[1mPOST /api/v1/labeldata HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:29:18] "GET /getdatacluster?t=13&s=1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:29:18] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:29:18] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:29:18] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:29:18] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:29:18] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:29:18] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:29:18] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:29:18] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:29:18] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:29:40] "POST /getdatacluster?t=13&s=1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:29:40] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:29:40] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:29:40] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:29:40] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:29:40] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:29:40] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:29:40] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:29:40] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:29:40] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:33:48] "[35m[1mPOST /api/v1/labeldata HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in '/Users/kapo/PycharmProjects/BrontoMind_Github_Version/bm/apis/v1/APIsClusteringServices.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
+INFO:werkzeug: * Detected change in '/Users/kapo/PycharmProjects/BrontoMind_Github_Version/bm/apis/v1/APIsClusteringServices.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2022 17:36:04] "[35m[1mPOST /api/v1/labeldata HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2022 08:41:56] "[35m[1mPOST /api/v1/labeldata HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2022 08:42:51] "[35m[1mPOST /api/v1/labeldata HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2022 08:46:14] "[35m[1mPOST /api/v1/labeldata HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2022 08:48:29] "[35m[1mPOST /api/v1/labeldata HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2022 08:49:26] "POST /getdatacluster?t=13&s=1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2022 08:49:26] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2022 08:49:26] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2022 08:49:26] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2022 08:49:26] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2022 08:49:26] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2022 08:49:26] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2022 08:49:26] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2022 08:49:26] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2022 08:49:26] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/Users/kapo/PycharmProjects/BrontoMind_Github_Version/bm/apis/v1/APIsClusteringServices.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2022 09:00:25] "[35m[1mPOST /api/v1/labeldata HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2022 09:01:25] "[35m[1mPOST /api/v1/labeldata HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2022 09:02:57] "[35m[1mPOST /api/v1/labeldata HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in '/Users/kapo/PycharmProjects/BrontoMind_Github_Version/bm/apis/v1/APIsClusteringServices.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
+INFO:werkzeug:127.0.0.1 - - [26/Sep/2022 09:06:38] "POST /api/v1/labeldata HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/kapo/PycharmProjects/BrontoMind_Github_Version/bm/apis/v1/APIsClusteringServices.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False

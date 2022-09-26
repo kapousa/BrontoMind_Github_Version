@@ -7,8 +7,9 @@ from flask import render_template, request
 
 from app import login_manager
 from app.apis import blueprint
+from bm.apis.v1.APIsClusteringServices import APIsClusteringServices
 from bm.apis.v1.APIsPredictionServices import predictvalues
-from bm.apis.v1.APIsclassificationServices import APIsclassificationServices
+from bm.apis.v1.APIsClassificationServices import APIsClassificationServices
 
 
 
@@ -24,10 +25,16 @@ def predictevalues_api():
 @blueprint.route('/api/v1/classifydata', methods=['POST'])
 def classifydata_api():
     content = request.json
-    apis_classification_services = APIsclassificationServices()
+    apis_classification_services = APIsClassificationServices()
     apireturn_json = apis_classification_services.classify_data(content)
     return apireturn_json
 
+@blueprint.route('/api/v1/labeldata', methods=['POST'])
+def labeldata_api():
+    content = request.json
+    apis_clustering_services = APIsClusteringServices()
+    apireturn_json = apis_clustering_services.cluster_data(content)
+    return apireturn_json
 
 # Errors
 

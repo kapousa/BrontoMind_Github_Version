@@ -26,37 +26,6 @@ class ClusteringDirector:
         # Create some member animals
         self.members = ['Tiger', 'Elephant', 'Wild Cat']
 
-    def classify_inputs_from_model(self, route_request):
-        ds_goal = request.args.get("t")
-        ds_source = request.args.get("s")
-        try:
-            opt_param = len(route_request.form)
-
-            if opt_param == 0:
-                # response = make_response()
-                return render_template('applications/pages/classification/textpredictevalues.html', ds_goal = ds_goal, ds_source = ds_source,
-                                       text_value='', predicted='Nothing', message='No')
-
-            if opt_param > 0:
-                input_text = request.form.get('text_value')
-                classification_model = ClassificationController()
-                text_class = [classification_model.classify_text(input_text)]
-
-                return render_template('applications/pages/classification/textpredictevalues.html',
-                                       ds_source= ds_source, ds_goal = ds_goal,
-                                       predicted_value=text_class, testing_values=input_text, predicted='Yes', message='No')
-
-            return render_template('applications/pages/classification/textpredictevalues.html',
-                                   error=str('Error'), ds_goal = ds_goal, ds_source= ds_source,
-                                   message="Not able to predict. One or more entered values has not relevant value in your dataset, please enter data from provided dataset",
-                                   segment='message')
-
-        except Exception as e:
-            return render_template('applications/pages/classification/textpredictevalues.html',
-                                   error=str(e), ds_goal = ds_goal,
-                                   message= "Error" + str(e),
-                                   segment='message')
-
     def prepare_date_files(self):
         # 1. Collect uploaded data files
         # 1. Collect uploaded data files

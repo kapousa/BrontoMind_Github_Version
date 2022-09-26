@@ -34,6 +34,7 @@ class ClusteringController:
         ''' Constructor for this class. '''
         # Create some member animals
         self.members = ['Tiger', 'Elephant', 'Wild Cat']
+        self.file_name = (self.file_name).replace("'","")
 
     def get_data_cluster(self, data):
         """
@@ -94,18 +95,10 @@ class ClusteringController:
 
             X_train = pd.read_pickle(full_file_path)
             X_train = shuffle(X_train)
-            # dcp = DataCoderProcessor()
-            # real_x = dcp.vectrise_feature_text(model_id, X_train)
-            # pca = PCA(2)
-            # Transform the data
-            # real_x = pca.fit_transform(real_x)
             documents = X_train[featuresdvalues].values.astype("U")
             documents = documents.flatten()
             features = []
             vectorizer = TfidfVectorizer(stop_words='english')
-
-            # for feature_array in X_train.columns:
-            #     if X_train[feature_array].dtypes == np.object:
 
             features = vectorizer.fit_transform(documents)
 
@@ -171,7 +164,7 @@ class ClusteringController:
 
             # Add features, labels, and APIs details
             add_features_list = add_features(model_id, [self.file_name])
-            add_labels_list = add_labels(model_id, ['cluster'])
+            add_labels_list = add_labels(model_id, ['cluster', 'keywords'])
             api_details_id = random.randint(0, 22)
             api_details_list = add_api_details(model_id, api_details_id, 'v1')
             api_details_list = update_api_details_id(api_details_id)
