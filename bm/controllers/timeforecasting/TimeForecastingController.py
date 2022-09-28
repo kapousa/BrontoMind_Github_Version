@@ -12,7 +12,8 @@ import pandas as pd
 from matplotlib import pyplot as plt
 from matplotlib.pyplot import xlabel
 from pandas import DataFrame, Series
-from scipy.linalg import pinv2
+#from scipy.linalg import pinv2
+#import scipy.linalg.pinv2
 from sklearn.linear_model import LinearRegression
 from sklearn.linear_model import Lasso
 from sklearn.ensemble import RandomForestRegressor
