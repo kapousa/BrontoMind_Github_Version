@@ -32180,3 +32180,11 @@ INFO:werkzeug: * Restarting with stat
 INFO:app:DEBUG       = True
 INFO:app:Environment = Debug
 INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
