@@ -32188,3 +32188,49 @@ INFO:werkzeug: * Restarting with stat
 INFO:app:DEBUG       = True
 INFO:app:Environment = Debug
 INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:40] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:40] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:40] "GET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:40] "GET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:40] "GET /static/assets/img/brand/white.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:40] "GET /static/assets/img/brand/blue.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:40] "GET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:40] "GET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:40] "GET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:40] "GET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:40] "GET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:40] "GET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:40] "GET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:41] "GET /static/images/loading1.gif HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:41] "GET /static/assets/vendor/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:41] "GET /static/assets/vendor/nucleo/fonts/nucleo-icons.woff2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:44] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:44] "GET /showdashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:44] "[36mGET /static/assets/vendor/nucleo/css/nucleo.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:44] "GET /static/assets/vendor/chart.js/dist/Chart.min.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:44] "GET /static/assets/vendor/chart.js/dist/Chart.extension.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:44] "[36mGET /static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:44] "[36mGET /static/assets/css/argon.css?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:45] "[36mGET /static/assets/vendor/jquery/dist/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:45] "[36mGET /static/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:45] "[36mGET /static/assets/vendor/js-cookie/js.cookie.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:45] "[36mGET /static/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:45] "[36mGET /static/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:45] "[36mGET /static/assets/js/argon.js?v=1.2.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:45] "[36mGET /static/assets/img/brand/blue.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:45] "GET /static/assets/img/theme/team-1.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:45] "GET /static/assets/img/theme/team-2.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:45] "GET /static/assets/img/theme/team-3.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:45] "GET /static/assets/img/theme/team-4.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:45] "GET /static/assets/img/theme/team-5.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:45] "[36mGET /static/assets/vendor/nucleo/fonts/nucleo-icons.woff2 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:45] "GET /static/images/loading2.gif HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Sep/2022 12:45:45] "GET /static/assets/vendor/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 -
