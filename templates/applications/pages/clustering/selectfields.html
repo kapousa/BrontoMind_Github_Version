@@ -33,8 +33,8 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <li>Select one or more value form the columns list</li>
-                                    <li>Your Model will predict those values based on your machine learning model
+                                    <li>Select one value form the columns list</li>
+                                    <li>Your Model will classify the data under clsses of the values in the slected column.
                                     </li>
                                     <li>Click run model button</li>
                                 </div>
@@ -56,46 +56,43 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Select columns that you want your machine to
-                                            predict its values and which columns should affect the results
-                                            (features).</label><br/>
+                                            catgories the data based on it and which columns should affect the results (features).</label><br/>
                                         <label class="alert alert-danger">Note: All empty columns removed from the
                                             dataset.</label><br/>
                                         <center>
                                             <!--select name="predictionvalues" id="predictionvalues" multiple-->
                                             <table class="table">
-                                                <thead>
+                                            <thead>
                                                 <tr>
-                                                    <td>Data features</td>
-                                                    <td>Dat column</td>
-                                                    <td>Predicted data</td>
+                                                    <td>source</td>
+                                                    <td></td>
                                                 </tr>
                                                 </thead>
-                                                <tbody>
+                                            <tbody>
                                                 {% for i in range(0, headersArray.size) %}
                                                     <tr>
-                                                        <td>
-                                                            <input type="checkbox"
-                                                                   name="featuresdvalues"
-                                                                   value="{{ headersArray[i] }}"/>
-                                                        </td>
                                                         <td>
                                                             {{ headersArray[i] }}
                                                         </td>
                                                         <td>
                                                             <input type="checkbox"
-                                                                   name="predcitedvalues"
+                                                                   name="clustering_features"
                                                                    value="{{ headersArray[i] }}"/>
                                                         </td>
                                                     </tr>
                                                 {% endfor %}
-                                                </tbody>
+                                            </tbody>
                                             </table>
                                             <!--/select-->
                                         </center>
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary">Run Model</button>
+                            <input type="hidden" name="fname" value="{{ fname }}">
+                            <input type="hidden" name="ds_source" value="{{ ds_source }}">
+                            <input type="hidden" name="ds_goal" value="{{ ds_goal }}">
+                            <input type="hidden" name="is_local_data" value="csv">
+                            <button type="submit" class="btn btn-primary pull-right">Run Model</button>
                             <div class="clearfix"></div>
                         </form>
                     </div>
@@ -106,6 +103,4 @@
 {% endblock content %}
 
 <!-- Specific Page JS goes HERE  -->
-{% block javascripts %}
-
-{% endblock javascripts %}
+{% block javascripts %}{% endblock javascripts %}
