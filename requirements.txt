@@ -19,6 +19,7 @@ docx-mailmerge
 docxcompose
 docx
 category_encoders
+scipy
 nltk
 mysql
 mysql-connector-python
@@ -26,4 +27,3 @@ skforecast
 statsmodels~=0.13.2
 plotly~=5.7.0
 requests
-scipy
