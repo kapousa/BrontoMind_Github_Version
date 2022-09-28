@@ -32250,3 +32250,8 @@ INFO:werkzeug: * Restarting with stat
 INFO:app:DEBUG       = True
 INFO:app:Environment = Debug
 INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
+INFO:werkzeug: * Detected change in '/Users/kapo/PycharmProjects/BrontoMind_Github_Version/bm/controllers/timeforecasting/TimeForecastingController.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
