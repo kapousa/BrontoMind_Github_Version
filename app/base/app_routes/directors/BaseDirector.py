@@ -24,7 +24,8 @@ class BaseDirector:
         f = request.files['filename']
         ds_source = session['ds_source']
         ds_goal = session['ds_goal']
-        filePath = os.path.join(df_location, secure_filename(f.filename))
+        # filePath = os.path.join(df_location, secure_filename(f.filename))
+        filePath = "%s%s" % ('data/', secure_filename(f.filename))
         f.save(filePath)
 
         # Remove empty columns
