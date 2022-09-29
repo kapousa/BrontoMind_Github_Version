@@ -33407,3 +33407,13 @@ INFO:werkzeug:127.0.0.1 - - [29/Sep/2022 11:17:30] "[36mGET /static/assets/vend
 INFO:werkzeug:127.0.0.1 - - [29/Sep/2022 11:17:30] "[36mGET /static/assets/img/theme/team-3.jpg HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [29/Sep/2022 11:17:30] "[36mGET /static/assets/img/theme/team-4.jpg HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [29/Sep/2022 11:17:30] "[36mGET /static/assets/img/theme/team-5.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/base/app_routes/directors/BaseDirector.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
+INFO:werkzeug: * Detected change in '/Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/base/app_routes/directors/BaseDirector.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:app:DEBUG       = True
+INFO:app:Environment = Debug
+INFO:app:DBMS        = sqlite:////Users/kapo/PycharmProjects/BrontoMind_Github_Version/app/db.sqlite3?check_same_thread=False
