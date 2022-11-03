@@ -1,7 +1,7 @@
 #  Copyright (c) 2021. Slonos Labs. All rights Reserved.
 import numpy as np
 from pandas import DataFrame
-from sklearn.cluster import KMeans
+from sklearn.cluster import KMeans, MeanShift
 from sklearn.linear_model import Lasso
 from sklearn.linear_model import SGDRegressor, SGDClassifier, LinearRegression
 from sklearn.multioutput import MultiOutputClassifier
@@ -135,10 +135,24 @@ class ModelProcessor:
                                         n_jobs=-1)
         return cls
 
-    def clustering_model_selector(self):
+    def clusteringmodelselector(self):
         try:
             cls = KMeans(
                 n_clusters=5)
             return cls
+        except Exception as e:
+            return config_parser.get('ErrorMessages', 'ErrorMessages.fail_create_model')
+
+    def clusteringmodelselector_(self, numberofrecords = 10001, numberofcategories = 0):
+        try:
+            if(numberofcategories == 0):
+                cls = KMeans(n_clusters=numberofcategories)
+                return cls
+
+            if(numberofrecords > 10000):
+                cls = MeanShift()
+                # cls.fit(np.reshape(features.data, (-1, 2)))
+                return cls
+
         except Exception as e:
             return config_parser.get('ErrorMessages', 'ErrorMessages.fail_create_model')

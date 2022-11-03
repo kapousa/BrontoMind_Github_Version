@@ -108,7 +108,7 @@ class ClusteringController:
 
             # Select proper model
             mp = ModelProcessor()
-            cls = mp.clustering_model_selector()
+            cls = mp.clusteringmodelselector()
             model = cls.fit(features)
             y_pred = cls.predict(features)
             X_train['cluster'] = model.labels_

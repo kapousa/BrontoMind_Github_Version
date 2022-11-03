@@ -360,7 +360,3 @@ class TimeForecastingController:
             print(e)
             return 0
 
-
-# csv_file = pd.read_csv('Sales_Data.csv')
-fc = TimeForecastingController()
-#o = fc.create_forecating_model('Sales_Data_1.csv', 'Product', 'Price', 'Transaction_date')
