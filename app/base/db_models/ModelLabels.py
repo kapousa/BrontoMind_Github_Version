@@ -15,7 +15,6 @@ class ModelLabels(db.Model):
     label_id = Column(Integer, primary_key=True, unique=True)
     label_name = Column(String)
     model_id = Column(Integer)
-
     def __init__(self, **kwargs):
         for property, value in kwargs.items():
             setattr(self, property, value)

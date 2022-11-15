@@ -150,9 +150,9 @@ class APIHelper:
             for i in range(len(modelfeatures)):
                 sample_request+= "%s%s%s:" % ('"',modelfeatures[i],'"')
                 if i < len(modelfeatures) - 1:
-                    sample_request+= "'',\n"
+                    sample_request+= '"",\n'
                 else:
-                    sample_request += "\n"
+                    sample_request += '""\n'
             sample_request+= "}"
 
             # Update the method's sample request
@@ -167,9 +167,9 @@ class APIHelper:
             for i in range(len(modellabels)):
                 sample_response += "%s%s%s:" % ('"', modellabels[i], '"')
                 if i < len(modellabels) - 1:
-                    sample_response += "'',\n"
+                    sample_response += '"",\n'
                 else:
-                    sample_response += "\n"
+                    sample_response += '""\n'
             sample_response += "}"
             # Update the method's sample request
             modelapimethods.sample_response = sample_response

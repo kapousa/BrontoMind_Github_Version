@@ -1,11 +1,13 @@
 #  Copyright (c) 2022. Slonos Labs. All rights Reserved.
 import csv
+import datetime
 
 import numpy
 import numpy as np
 import pandas as pd
 from pandas import DataFrame
 import pickle
+import datetime as dt
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 
@@ -15,6 +17,7 @@ from sklearn import preprocessing
 from app.base.db_models.ModelEncodedColumns import ModelEncodedColumns
 from bm.db_helper.AttributesHelper import get_encoded_columns
 from bm.utiles.CVSReader import getcvsheader
+from bm.utiles.Helper import Helper
 
 
 class DataCoderProcessor:
@@ -31,11 +34,14 @@ class DataCoderProcessor:
         data_types = data.dtypes
         for i in range(len(data_types)):
             if data_types[i] != np.int64 and data_types[i] != np.float:
+                is_date = Helper.validate_timestring(data.iloc[0, data.columns.get_loc(columns_name[i])])   # to be added to ent version
                 data_item = {'model_id': model_id, 'column_name': columns_name[i],
-                             'column_type': column_type}
+                             'column_type': column_type, 'is_date': is_date}    # to be added to ent version
                 encoded_columns.append(data_item)
                 col_name = columns_name[i]
-                dummies = self.encode_column(col_name, data[[col_name]])
+                dummies = self.encode_column(col_name, data[[col_name]]) if ( is_date == 0) else self.endcode_datetime_column(col_name,
+                                                                                          data[[
+                                                                                              col_name]])  # to be added to ent version
                 dummies = pd.DataFrame(dummies)
                 data = data.drop([col_name], axis=1)
                 data.insert(i, col_name, dummies)
@@ -84,7 +90,7 @@ class DataCoderProcessor:
                 pkl_file_location = self.pkls_location + col_name + '_pkle.pkl'
                 encoder_pkl = pickle.load(open(pkl_file_location, 'rb'))
                 column_data_arr = numpy.array(input_value)
-                encoded_values = encoder_pkl.transform(column_data_arr.reshape(-1, 1))
+                encoded_values = encoder_pkl.transform(column_data_arr.reshape(-1, 1)) if (Helper.is_time(col_name) == 0 ) else self.endcode_datetime_column(col_name, column_data_arr.flatten())        # to be added to ent version                                                          # to be added to ent version
                 encoded_columns.append(encoded_values[0])
             else:
                 encoded_columns.append(input_value)
@@ -106,7 +112,9 @@ class DataCoderProcessor:
                     pkl_file_location = self.pkls_location + col_name + '_pkle.pkl'
                     encoder_pkl = pickle.load(open(pkl_file_location, 'rb'))
                     column_data_arr = numpy.array(input_values_row[j])
-                    original_value = encoder_pkl.inverse_transform(column_data_arr.reshape(-1, 1))
+                    print(Helper.validate_datestring_arr(column_data_arr.flatten()))
+                    original_value = encoder_pkl.inverse_transform(column_data_arr.reshape(-1, 1)) if (Helper.is_time(col_name) == 0 )  else self.decode_datetime_value(
+                        column_data_arr)  # to be added to ent version
                     decoded_row.append(original_value[0].strip())
                 else:
                     decoded_row.append(str(input_values_row[j]))
@@ -171,3 +179,60 @@ class DataCoderProcessor:
             category_values = getcvsheader(category_file_location)
             all_gategories_values[encoded_columns[i]] = category_values
         return all_gategories_values
+
+    def endcode_datetime_column(self, col_name, df_col):  # to be added to ent version
+        df = df_col
+        #df[col_name] = df[col_name].astype(str)
+        df[col_name] = pd.to_timedelta(df[col_name])
+        df[col_name] = df[col_name].dt.total_seconds().astype(int)
+
+        pkl_file_location = self.pkls_location + col_name + '_pkle.pkl'
+        pickle.dump('endcode_datetime_column', open(pkl_file_location, 'wb'))
+
+        # save categories
+        category_file_location = self.category_location + col_name + '_csv.csv'
+        with open(category_file_location, 'w') as f:
+            # create the csv writer
+            writer = csv.writer(f)
+            # write a row to the csv file
+            writer.writerow('')
+
+        return df.loc[:, col_name]
+
+    def decode_datetime_value(self, number_of_seconds_arr):  # to be added to ent version
+        number_of_seconds_arr = number_of_seconds_arr.flatten()
+        xx = float(number_of_seconds_arr[0])
+        td = [str(datetime.timedelta(seconds=xx))]
+        return td
+
+    def endcode_datetime_column_(self, col_name, df_col):  # to be added to ent version
+        epoch_time = dt.datetime(2000, 1, 1, 0, 0, 0)
+        df = {col_name: df_col}
+        df= pd.DataFrame(df)
+
+        df[col_name] = pd.to_datetime(df[col_name], format='%d/%m/%Y %I:%M:%S %p')  # Convert data to datetime object
+
+        df[col_name] = (df[col_name] - epoch_time)
+        df[col_name] = df[col_name].dt.total_seconds().astype(int)
+
+        pkl_file_location = self.pkls_location + col_name + '_pkle.pkl'
+        pickle.dump('endcode_datetime_column', open(pkl_file_location, 'wb'))
+
+        # save categories
+        category_file_location = self.category_location + col_name + '_csv.csv'
+        with open(category_file_location, 'w') as f:
+            # create the csv writer
+            writer = csv.writer(f)
+            # write a row to the csv file
+            writer.writerow('')
+
+        return df.loc[:, col_name]
+
+    def decode_datetime_value_(self, number_of_seconds_arr):  # to be added to ent version
+        # epoch time
+        epoch_time = dt.datetime(2000, 1, 1, 0, 0,0)
+        df = {'number_of_seconds': number_of_seconds_arr}
+        df['number_of_seconds'] = df['number_of_seconds'].astype('timedelta64[s]') + epoch_time
+        df['number_of_seconds'] = pd.to_datetime(df['number_of_seconds'], unit='s').dt.time
+
+        return df.loc[:, 'number_of_seconds']
