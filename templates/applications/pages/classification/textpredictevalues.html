@@ -16,7 +16,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header card-header-success">
-                        <h2>Get the category</h2>
+                        <h2>Get the category1</h2>
                         <lead>Enter your text to let BrontoMind classify it under the sutiable category.
                         </lead>
                     </div>
@@ -25,12 +25,7 @@
                               name="predictevalues">
                             <div class="form-group">
                                 <label class="bmd-label-floating">Inout Text</label>
-                                <textarea rows="10"
-                                        value="{{ testing_values }}"
-                                        class="form-control" name="text_value"
-                                        id="text_value"
-                                        required>
-                                </textarea>
+                                <textarea rows="4" value="{{ testing_values }}" class="form-control" name="text_value" id="text_value" required></textarea>
                             </div>
                         <br/>
                         <button type="submit" class="btn btn-primary pull-right">Predict Values</button>
@@ -64,6 +59,7 @@
                                     </tbody>
                                 </table>
                             </center>
+                        {{ params }}
                         </div>
                     </div>
                 </div>

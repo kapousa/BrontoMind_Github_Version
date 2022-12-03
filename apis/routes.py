@@ -29,6 +29,13 @@ def classifydata_api():
     apireturn_json = apis_classification_services.classify_data(content)
     return apireturn_json
 
+@blueprint.route('/api/v1/getreports', methods=['POST'])
+def getreports_api():
+    content = request.json
+    apis_classification_services = APIsClassificationServices()
+    apireturn_json = apis_classification_services.get_reports(content)
+    return apireturn_json
+
 
 # Errors
 

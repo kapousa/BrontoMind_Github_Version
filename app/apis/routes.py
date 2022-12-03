@@ -42,6 +42,12 @@ def labeldata_api():
 def unauthorized_handler():
     return render_template('page-403.html'), 403
 
+@blueprint.route('/api/v1/getreports', methods=['POST'])
+def getreports_api():
+    content = request.json
+    apis_classification_services = APIsClassificationServices()
+    apireturn_json = apis_classification_services.get_reports(content)
+    return apireturn_json
 
 @blueprint.errorhandler(403)
 def access_forbidden(error):

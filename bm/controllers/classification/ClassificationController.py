@@ -1,6 +1,7 @@
 import os
 import pickle
 import random
+import re
 import shutil
 from datetime import datetime
 from random import randint
@@ -21,6 +22,7 @@ from app.base.constants.BM_CONSTANTS import plot_zip_locations, pkls_location, d
     plot_locations, scalars_location, image_short_path, data_files_folder, \
     app_root_path
 from app.base.db_models.ModelProfile import ModelProfile
+from base.db_models.ModelQaxessReports import ModelQaxessReports
 from bm.controllers.BaseController import BaseController
 from bm.controllers.ControllersHelper import ControllersHelper
 from bm.controllers.classification.ClassificationControllerHelper import ClassificationControllerHelper
@@ -329,4 +331,24 @@ class ClassificationController:
         classification_controller_helper = ClassificationControllerHelper()
         return classification_controller_helper.classify(test_text)
 
-# b = run_demo_model1(root_path, 'diabetes.csv', ['Age'], '1', '2')
+    def get_reports_list(self, user_text):
+        """
+        This function recives the user text and return the associated report with parameters of the reports filled by the values from the entered text
+        @param user_text:
+        @return:
+        """
+        # Get the suggested report
+        classificationcontrollerhelper = ClassificationControllerHelper()
+        txt = user_text.lower()
+        txt = txt.replace(',', '')
+        txt_arr = txt.split(' ')
+
+        sugg_rep_name = classificationcontrollerhelper.classify1(txt)
+
+        # Get reports with paramters list
+        repname = str(sugg_rep_name[0]).strip()
+
+        # Get paramters of suggested report
+        params = classificationcontrollerhelper.get_report_parameters(repname, txt)
+
+        return [sugg_rep_name], params

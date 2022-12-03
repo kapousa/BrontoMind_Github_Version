@@ -1,7 +1,11 @@
 # from itertools import izip
+import ast
 import csv
+import difflib
+from datetime import datetime
 import os
 import pickle
+import re
 import string
 from collections import defaultdict
 from csv import DictReader
@@ -25,6 +29,7 @@ from sklearn.naive_bayes import MultinomialNB
 from app.base.constants.BM_CONSTANTS import html_plots_location, html_short_path, app_root_path, \
     pkls_location, \
     data_files_folder, df_location
+from base.db_models.ModelQaxessReports import ModelQaxessReports
 from bm.utiles.Helper import Helper
 
 
@@ -413,3 +418,87 @@ class ClassificationControllerHelper:
         pred = np_clf.predict(vectorizer.transform([text]))
 
         return pred
+
+
+    def classify1(self, text):
+        # Load model
+        clf_filename = '%s%s%s' % (app_root_path, pkls_location, '/classifier_pkl.pkl')
+        np_clf = pickle.load(open(clf_filename, 'rb'))
+
+        # load vectorizer
+        vec_filename = '%s%s%s' % (app_root_path, pkls_location, '/vectorized_pkl.pkl')
+        vectorizer = pickle.load(open(vec_filename, 'rb'))
+
+        pred = np_clf.predict(vectorizer.transform([text]))
+
+        return pred
+
+    def get_report_parameters(self, sugg_rep_name, input_text):
+        # Get reports with paramters list
+        repname = str(sugg_rep_name).strip()
+        rep_params = ModelQaxessReports.query.with_entities(ModelQaxessReports.parameters).filter_by(
+            report_name=repname).first()
+
+        # Get paramters of suggested report
+        rep_params_arr = re.split(',', rep_params[0])
+        rep_params_arr = [str.strip(x.lower()) for x in rep_params_arr]
+        params = {}
+        if (len(rep_params_arr) > 0):
+            txt_lower = input_text.lower()
+            for i in range(len(rep_params_arr)):
+                param_lower = rep_params_arr[i]
+                is_exist = re.search(param_lower, txt_lower)    # need to be improved to find the parameter name or alternative
+                #if(not is_exist):
+                    #txt_words = txt_lower.split()
+                    #close_word = difflib.get_close_matches(param_lower, txt_words, 1)
+                if (is_exist):# or close_word != None):
+                    ky = rep_params_arr[i]
+                    if (re.search("Date".lower(), param_lower)):  # check if the parameter type is date
+                        vl = re.search(
+                            r"[\d]{1,2}/[\d]{1,2}/[\d]{4}|[\d]{1,2}-[\d]{1,2}-[\d]{2}|[\d]{1,2} [ADFJMNOS]\w* [\d]{4}|[\d]{1,2} [ADFJMNOS]\w* [\d]{4}",
+                            input_text)
+                        vl = str(datetime.strptime(vl.group(), '%d/%m/%Y').date())
+                        params[ky] = vl
+                    elif (re.findall(r'"(.+?)"', input_text) != None  and len(re.findall(r'"(.+?)"', input_text)) != 0):
+                        matches = re.findall(r'"(.+?)"', input_text)
+                        if (matches != None):
+                            for j in range(len(matches)):
+                                # using any() to check for any occurrence
+                                if (any(chr.isdigit() for chr in input_text)):
+                                    print(ky)
+                                    vl = re.search(
+                                        r"(?:(?<!\S)(\d+(?:,\d+)?)(?!\S)\D*\b%s|\b%s\D*(?<!\S)(\d+(?:,\d+)?)(?!\S))" % (
+                                        ky, ky), input_text)
+                                    if (vl != None):
+                                        test_string = vl.string
+                                        param_values = [int(i) for i in test_string.split() if i.isdigit()]
+                                        params[ky] = param_values[0]
+                                        break
+                                else:
+                                    strparam_withvalue = re.search(r'%s(.*?)%s' % (rep_params_arr[j], matches[j]), input_text)
+                                    # if (not close_word):
+                                    #     print('0')
+                                    # else:
+                                    #     close_strparam_withvalue = re.search(r'%s(.*?)%s' % (close_word, matches[j]), input_text)
+                                    if (strparam_withvalue != None):# or close_strparam_withvalue != None):
+                                        params[ky] = str(matches[j])
+                                        break
+
+                        else:
+                            params[ky] = '?'
+                    else:
+                        vl = re.search(
+                            r"(?:(?<!\S)(\d+(?:,\d+)?)(?!\S)\D*\b%s|\b%s\D*(?<!\S)(\d+(?:,\d+)?)(?!\S))" % (ky, ky),
+                            input_text)
+                        if (vl != None):
+                            test_string = vl.string
+                            param_values = [int(i) for i in test_string.split() if i.isdigit()]
+                            params[ky] = param_values[0]
+
+        # Adding missing parameters
+        exist_param_keys = params.keys()
+        for i in range(len(rep_params_arr)):
+            if rep_params_arr[i] not in exist_param_keys:
+                params[rep_params_arr[i]] = '?'
+
+        return params

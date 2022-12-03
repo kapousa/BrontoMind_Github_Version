@@ -44,3 +44,28 @@ class APIsClassificationServices:
         json_data = json.dumps(text_category_json, cls=NpEncoder)
 
         return json_data
+
+    def get_reports(self, content):
+        classification_controller = ClassificationController()
+        report_name, params = classification_controller.get_reports_list(content['data'])
+        report_name = numpy.array(report_name)
+        report_name = report_name.flatten()
+        # {
+        #         "report_name": "xyz",
+        #         "report_params": {
+        #             "param_1": "1",
+        #             "param_2": "1",
+        #             "param_3": "1"
+        #         }
+        # }
+
+        # Create predicted values json object
+        report_profile_json = {}
+        report_profile_json["report_name"] = report_name[0]
+        text_params_json= {}
+        for key, value  in params.items():
+            text_params_json[key] = value
+        report_profile_json["report_params"] = text_params_json
+        json_data = json.dumps(report_profile_json, cls=NpEncoder)
+
+        return json_data

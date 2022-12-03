@@ -1,0 +1,45 @@
+Technicians Working Time	Total Working Time per technician
+Maintenance Orders Summary (Chart)	Maintenance Orders Count Over Period
+Machine Life Cycle	Machine History over period
+Machines with open orders	List of machines which have currently open orders
+Maintenance Orders Report	List of maintenance orders with details based on search criteria
+Used Spare Parts	List of spare parts used within specific period can be generated for a machine or machine type
+Machine Shutdown Time	Total time of machine shutdown for a specific period
+Maintenance Orders Summary	Orders Summary over a period of time
+Maintenance Orders By Category	Orders by category over a period of time
+Maintenance Orders By Machine Type	Orders by machine type over a period of time
+Replaced Spare Parts	Spare parts replaced within a period of time
+On-hold Maintenance Orders	On-hold maintenance orders with a period of time
+Supplier Payments	Purchase Invoices Payments
+Supplier Summary	Supplier invoices and payments details
+Purchase Orders by supplieer	Purchase Orders by supplier
+Purchase Orders by component	Purchase Orders by component
+Purchases Details	Purchased components details
+Receive Pending Components	Components ordered but not received yet
+Profitability Report	Sales Order Profitability
+Sales Invoice	Print an existing sales invoice
+Item Card	Item Card
+Production Orders Summary (Chart)	Production Orders Count Over Period
+Taxes Report	Taxes Report
+Account Transactions	Account Transactions
+Account Balance	Account Balance
+Balance Sheet	Balance Sheet
+Sales By Product	Sales By Product
+Quotations By Product	Quotations By Product
+Sales VS purchase	Sales VS purchase (by invoices)
+Purchases By Item report	Purchases By Item report
+Inventory Balance Report	Inventory Balance Report
+Client Statement (by sales orders)	Client Statement
+Purchase Invoice	Purchase Invoice
+Supplier Statement	Supplier Statement
+Clients Balance	Clients Balance
+Supplier Balance	Supplier Balance
+Inventory Transactions	Inventory Transactions
+Production Cost	Production Cost (Material Processing)
+Sales by sales team member	Sales by sales team members (Quotations & Sales Orders)
+Item purchases by price	Purchases for a specific item and price change
+Item purchases by quantity	Purchases for a specific item by quantity
+Items Available Balance Report	Items Available Balance Report
+Quotations VS Sales	Comparison between volume of quotations against sales in a specific period
+Daily Production Report	Production per day
+Client Statement (by invoice)	Client Statement by invoice

@@ -25,18 +25,14 @@
                               name="predictevalues">
                             <div class="form-group">
                                 <label class="bmd-label-floating">Inout Text</label>
-                                <textarea rows="10"
-                                        value="{{ testing_values }}"
-                                        class="form-control" name="text_value"
-                                        id="text_value"
-                                        required>
-                                </textarea>
+                                <textarea rows="4" class="form-control" name="text_value" id="text_value"
+                                          required>{{ testing_values }}</textarea>
                             </div>
-                        <br/>
-                        <button type="submit" class="btn btn-primary pull-right">Predict Values</button>
-                        <div class="clearfix"></div>
-                        <input type="hidden" name="ds_source" value="{{ ds_source }}">
-                        <input type="hidden" name="ds_goal" value="{{ ds_goal }}">
+                            <br/>
+                            <button type="submit" class="btn btn-primary pull-right">Predict Values</button>
+                            <div class="clearfix"></div>
+                            <input type="hidden" name="ds_source" value="{{ ds_source }}">
+                            <input type="hidden" name="ds_goal" value="{{ ds_goal }}">
                         </form>
                     </div>
                 </div>
@@ -48,16 +44,25 @@
                 <div class="col-md-6">
                     <div class="card">
                         <div class="card-header card-header-warning">
-                            <h2 style="text-align: center">Text Calss</h2>
+                            <h2 class="lead text-center text-primary bold">Text Class</h2>
                         </div>
                         <div style="text-align: center">
                             <center>
                                 <table class="table">
+                                    <thead class="font-weight-bold">
+                                    <td class="text-center">Class</td>
+                                    <td>Parameters</td>
+                                    </thead>
                                     <tbody>
                                     {% for predicted_value_row in predicted_value %}
                                         <tr>
                                             {% for j in range(predicted_value_row|length) %}
-                                                <td class="text-center">{{ predicted_value_row[j] }}</td>
+                                                <td class="bold text-primary text-center">{{ predicted_value_row[j] }}</td>
+                                                <td class="bold text-primary">
+                                                    {% for key, value  in params.items() %}
+                                                        {{ key }} = {{ value }}<br/>
+                                                    {% endfor %}
+                                                </td>
                                             {% endfor %}
                                         </tr>
                                     {% endfor %}

@@ -36,10 +36,10 @@ class ClassificationDirector:
             if opt_param > 0:
                 input_text = request.form.get('text_value')
                 classification_model = ClassificationController()
-                text_class = [classification_model.classify_text(input_text)]
-
+                #text_class = [classification_model.classify_text(input_text)]
+                text_class, params = classification_model.get_reports_list(input_text)
                 return render_template('applications/pages/classification/textpredictevalues.html',
-                                       ds_source= ds_source, ds_goal = ds_goal,
+                                       ds_source= ds_source, ds_goal = ds_goal, params = params,
                                        predicted_value=text_class, testing_values=input_text, predicted='Yes', message='No')
 
             return render_template('applications/pages/classification/textpredictevalues.html',

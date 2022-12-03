@@ -1,0 +1,46 @@
+Description,Report Name
+Total Working Time per technician,Technicians Working Time
+Maintenance Orders Count Over Period,Maintenance Orders Summary (Chart)
+Machine History over period,Machine Life Cycle
+List of machines which have currently open orders,Machines with open orders
+List of maintenance orders with details based on search criteria,Maintenance Orders Report
+List of spare parts used within specific period can be generated for a machine or machine type,Used Spare Parts
+Total time of machine shutdown for a specific period,Machine Shutdown Time
+Orders Summary over a period of time,Maintenance Orders Summary
+Orders by category over a period of time,Maintenance Orders By Category
+Orders by machine type over a period of time,Maintenance Orders By Machine Type
+Spare parts replaced within a period of time,Replaced Spare Parts
+On-hold maintenance orders with a period of time,On-hold Maintenance Orders
+Purchase Invoices Payments,Supplier Payments
+Supplier invoices and payments details,Supplier Summary
+Purchase Orders by supplier,Purchase Orders by supplieer
+Purchase Orders by component,Purchase Orders by component
+Purchased components details,Purchases Details
+Components ordered but not received yet,Receive Pending Components
+Sales Order Profitability,Profitability Report
+Print an existing sales invoice,Sales Invoice
+Item Card,Item Card
+Production Orders Count Over Period,Production Orders Summary (Chart)
+Taxes Report,Taxes Report
+Account Transactions,Account Transactions
+Account Balance,Account Balance
+Balance Sheet,Balance Sheet
+Sales By Product,Sales By Product
+Quotations By Product,Quotations By Product
+Sales VS purchase (by invoices),Sales VS purchase
+Purchases By Item report,Purchases By Item report
+Inventory Balance Report,Inventory Balance Report
+Client Statement,Client Statement (by sales orders)
+Purchase Invoice,Purchase Invoice
+Supplier Statement,Supplier Statement
+Clients Balance,Clients Balance
+Supplier Balance,Supplier Balance
+Inventory Transactions,Inventory Transactions
+Production Cost (Material Processing),Production Cost
+Sales by sales team members (Quotations & Sales Orders),Sales by sales team member
+Purchases for a specific item and price change,Item purchases by price
+Purchases for a specific item by quantity,Item purchases by quantity
+Items Available Balance Report,Items Available Balance Report
+Comparison between volume of quotations against sales in a specific period,Quotations VS Sales
+Production per day,Daily Production Report
+Client Statement by invoice,Client Statement (by invoice)
